@@ -1,0 +1,255 @@
+
+body {
+font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+width: 100%;
+max-width: 970px;
+margin: 0 auto;
+}
+
+
+/*header*/
+
+.header__wrapper {
+border-bottom: 1px solid #828282;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+header nav ul {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
+
+header nav ul li a {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.02em;
+color: #828282;
+text-decoration: unset;
+}
+
+header nav ul li a.activ-link {
+color: #070707;
+}
+
+
+/*first screen*/
+
+.home__wrapper{
+height: 497px;
+width: 970px;
+top: 92px;
+left: 235px;
+gap: 50px;
+}
+
+h1 {
+width: 300px;
+height: 60px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 65px;
+color: #070707;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin-bottom: 50px;
+}
+    
+.foto_man {
+width: 970px;
+height: 387px;
+background: url
+order: 1;
+flex-grow: 0;
+}
+
+/*About me*/
+
+about__wrapper{
+background: #F6F6F6;
+}
+
+h2{
+text-align: center;
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 46px;
+color: #070707;
+}
+h2.about_name {
+background: #F6F6F6;
+}
+.about__me {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 50px;
+isolation: isolate;
+left: 235px;
+top: 589px;
+background: #F6F6F6;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+}
+
+.about_name {
+  padding: 100px 0 50px 0;
+}
+.about_three{
+  margin-bottom: 100px;
+}
+
+
+/*skills*/
+.skills .items {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.skills .subtitle {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+color: #070707;
+margin: 20px 0 50px 0;
+}
+
+.skills {
+padding: 0 0 100px 0 ;
+}
+.title {
+margin-top: 100px;
+}
+
+
+/*portfolio*/
+
+.portfolio-wrapper {
+gap: 70px;
+width: 970px;
+height: 1978px;
+background: #F6F6F6;
+padding: 0 0 300px 0;
+}
+
+.portfolio_name{
+padding: 100px 0 50px 0;
+}
+
+.link_under_foto_fashion {
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+margin-top: 40px;
+margin-bottom: 70px;
+}
+.link_under_foto_Reebok {
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+margin-top: 40px;
+margin-bottom: 70px;
+}
+.link_under_foto_Braun {
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+margin-top: 40px;
+}
+
+.under {
+text-align: center;
+text-decoration-line: underline; 
+color: #070707;
+}
+
+
+/*contacts*/
+.contacts-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 3px;
+  gap: 60px;
+  position: absolute;
+  width: 970px;
+  height: 400px;
+  left: 235px;
+  top: 4021px;
+}
+
+.contacts_name {
+padding: 100px 0 20px 0;
+}
+
+.contacts {
+text-align: center; 
+}
+
+.contacts_text
+{margin-bottom: 60px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+}
+.send_message{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+letter-spacing: 0.1em;
+color: #FFFFFF;
+}
+.button{
+background: #070707;
+border-radius: 22px;
+padding: 10px 16px;
+}
+.social {
+display: flex;
+align-items: center;; 
+padding: 40px 0px ;
+justify-content: center;
+}
+.image_social {
+  padding: 0 25px;
+}
+.contacts_end{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+color: #828282;
+padding: 60px 0 100px 0;
+}
+
