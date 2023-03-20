@@ -2,16 +2,12 @@
 body {
 font-family: 'Open Sans', sans-serif;
 }
-
 .container {
 width: 100%;
 max-width: 970px;
 margin: 0 auto;
 }
-
-
 /*header*/
-
 .header__wrapper {
 border-bottom: 1px solid #828282;
 height: 80px;
@@ -19,14 +15,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
 header nav ul {
 display: flex;
 align-items: center;
 justify-content: center;
 gap: 40px;
 }
-
 header nav ul li a {
 font-family: 'Open Sans';
 font-style: normal;
@@ -37,14 +31,10 @@ letter-spacing: 0.02em;
 color: #828282;
 text-decoration: unset;
 }
-
 header nav ul li a.activ-link {
 color: #070707;
 }
-
-
 /*first screen*/
-
 .home__wrapper{
 height: 497px;
 width: 970px;
@@ -52,7 +42,6 @@ top: 92px;
 left: 235px;
 gap: 50px;
 }
-
 h1 {
 width: 300px;
 height: 60px;
@@ -66,8 +55,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin-bottom: 50px;
-}
-    
+}  
 .foto_man {
 width: 970px;
 height: 387px;
@@ -75,13 +63,10 @@ background: url
 order: 1;
 flex-grow: 0;
 }
-
 /*About me*/
-
 about__wrapper{
 background: #F6F6F6;
 }
-
 h2{
 text-align: center;
 font-style: normal;
@@ -110,22 +95,18 @@ font-size: 18px;
 line-height: 25px;
 text-align: center;
 }
-
 .about_name {
   padding: 100px 0 50px 0;
 }
 .about_three{
   margin-bottom: 100px;
 }
-
-
 /*skills*/
 .skills .items {
 display: flex;
 align-items: center;
 justify-content: space-between;
 }
-
 .skills .subtitle {
 font-family: 'Open Sans';
 font-style: normal;
@@ -136,17 +117,13 @@ text-align: center;
 color: #070707;
 margin: 20px 0 50px 0;
 }
-
 .skills {
 padding: 0 0 100px 0 ;
 }
 .title {
 margin-top: 100px;
 }
-
-
 /*portfolio*/
-
 .portfolio-wrapper {
 gap: 70px;
 width: 970px;
@@ -154,11 +131,9 @@ height: 1978px;
 background: #F6F6F6;
 padding: 0 0 300px 0;
 }
-
 .portfolio_name{
 padding: 100px 0 50px 0;
 }
-
 .link_under_foto_fashion {
 font-weight: 400;
 font-size: 18px;
@@ -179,14 +154,11 @@ font-size: 18px;
 line-height: 25px;
 margin-top: 40px;
 }
-
 .under {
 text-align: center;
 text-decoration-line: underline; 
 color: #070707;
 }
-
-
 /*contacts*/
 .contacts-wrapper{
   display: flex;
@@ -200,15 +172,12 @@ color: #070707;
   left: 235px;
   top: 4021px;
 }
-
 .contacts_name {
 padding: 100px 0 20px 0;
 }
-
 .contacts {
 text-align: center; 
 }
-
 .contacts_text
 {margin-bottom: 60px;
 font-family: 'Open Sans';
