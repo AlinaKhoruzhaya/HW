@@ -71,9 +71,10 @@ button {
     margin: 45px 0;
     } 
 .form-item{
-    display: flex;
+    display: block;
     align-items: center;
     height: 45px;
+    width: 534px;
     background: #88839E;
     text-align: left;
     border-top:  3px solid  #88839E;
@@ -173,3 +174,9 @@ input[type="checkbox"]:not(:checked) + label:after {
 input[type="checkbox"]:checked + label:after{
     opacity: 1;
 }
+input[type="checkbox"]{
+    width: 100%;
+    max-width: 534px;
+    margin: 0 auto;
+}
+*{transition: all .1s ease-in;}
