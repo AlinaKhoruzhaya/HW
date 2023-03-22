@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Home work 6</title>
+</head>
+<body class="container">
+    <form action="/" method="post" name="registration">
+    <table class="formtable" style="width:500pt">
+        <tbody>
+            <tr>
+                <td><label for="name">Повне ім'я</label></td>
+                <td> <input type="text" id="name" name="name" required placeholder="Висильєв Василь Васильович" autocomplete="on" autofocus minlength="12"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td> <input type="email" id="email" name="email" required placeholder="username@mail.com" autocomplete="on"><br></td>
+            </tr>
+            <tr>
+                <td><label for="password">Пароль</label></td>
+                <td><input type="password" id="password" name="password" required minlength="8" maxlength="8" 
+                    autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" 
+                    title="Должен содержать как минимум одну цифру и одну заглавную и строчную букву, а также не менее и не более 8 символов."><br></td>
+            </tr>
+            <tr>
+                <td> <label for="password">Пароль ще раз</label></td>
+                <td><input type="password" id="password" name="password" required minlength="8" maxlength="8"
+                     autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" 
+                     title="Должен содержать как минимум одну цифру и одну заглавную и строчную букву, а также не менее и не более 8 символов."><br></td>
+            </tr>
+            <tr>
+                <td> <p>Стать</p></td>
+                <td> <input type="radio" id="man" name="gender" value="man" checked>
+                      <label for="man">чоловіча</label>
+                      <input type="radio" id="women" name="gender" value="women">
+                      <label for="women">жіноча</label><br></td>
+            </tr>
+            <tr> 
+                <td><label for="age">Вік</label></td>
+                <td> <input type="number" id="age" name="age" required class="age" min="1" max="100"><br></td>
+            </tr>
+            <tr>
+                <td><label for="cours">Курс</label></td>
+                <td> <select id="cours" name="cours" required>
+                    <option value="not_selected" selected>=Виберіть курс=</option>
+                    <option value="Front-End">Front-End</option>
+                    <option value="Back-End">Back-End</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="QA_Manual">QA Manual</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td> <p> Повна адреса</p></td>
+                <td><textarea class="adress" name="mailing_address" style="width200px; height:100px;" required>Країна, регіон, місто/селище, вулиця</textarea>
+                 <br></td>
+            </tr>
+        </tbody>
+    </table>
+            <input type="checkbox" id="consent" name="consent" value="yes" required>
+            <label for="consent" class="yes">Я погоджуюсь з обробкою персональних даних</label><br>
+
+        <div class="buttons">
+            <input type="reset" value="Очистити форму">
+            <input type="submit" value="Зареєструватися">
+        </div>
+    </form>
+</body>
+</html>
+   
