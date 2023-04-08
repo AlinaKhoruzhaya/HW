@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(images/bg-picture.png);
+    background-repeat: no-repeat;
+    background-position: right 0 top 122px;
+    background-attachment: fixed;
+}
+
+/*header*/
+a.logo {
+    width: 238px;
+    height: 54px;
+}
+
+header {
+    height: 54px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding-bottom: 70px;
+}
+
+div.header {
+    display: flex;
+}
+
+div nav ul.header {
+    display: flex;
+    gap: 10px;
+    height: 54px;
+    margin-right: 601px;
+}
+
+div.eng {
+    font-family: 'Tourney', cursive;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+
+div nav ul li {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+div nav ul li.shot::after {
+    content: "/";
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*main */
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 124px;
+    display: grid;
+    grid-template-columns: 385px 785px;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+}
+
+/*side-bar*/
+main div.side-bar-conteiner {
+    width: 385px;
+    height: 462px;
+}
+
+div.side-bar nav ul li a {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+a.box-sizing {
+    width: 365px;
+    height: 58px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+div.side-bar nav ul {
+    display: grid;
+    gap: 70px;
+}
+
+div.side-bar {
+    position: sticky;
+    top: 150px;
+}
+
+/*text-conteiner*/
+main div.main-text-conteiner {
+    width: 785px;
+    height: 2931px;
+}
+
+h1 {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    display: flex;
+    margin-right: 10px;
+    align-items: end;
+}
+
+sub {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    width: 100px;
+    height: 20px;
+    display: block;
+}
+
+div.title {
+    display: flex;
+    white-space: nowrap;
+    height: 48px;
+    position: relative;
+    padding-top: 28px;
+}
+
+div.title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    border-top: 8px solid #000;
+    content: "";
+}
+
+div.title-one,
+div.title-two {
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000000;
+}
+
+p.section-one,
+p.section-two,
+section.three {
+    margin-bottom: 70px;
+}
+
+p.section-four {
+    padding-bottom: 90px;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+section.three {
+    display: grid;
+    row-gap: 40px;
+}
+
+span.bold {
+    font-weight: 700;
+}
+
+span.bg {
+    background-color: #DADADA;
+}
+
+section.four {
+    display: grid;
+    row-gap: 40px;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+p.text_container_one {
+    height: 185px;
+}
+
+p.text_container_two {
+    height: 41px;
+}
+
+p.text_container_three {
+    height: 134px;
+}
+
+p.text_container_four {
+    height: 135px;
+}
+
+p.text_container_five {
+    height: 48px;
+}
+
+p.text_container_six {
+    height: 240px;
+}
