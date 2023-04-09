@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@600&display=swap');
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*header*/
+div.logo {
+    width: 238px;
+    height: 54px;
+}
+
+header {
+    height: 54px;
+    margin-bottom: 70px;
+    margin-top: 13px;
+}
+
+div.header {
+    display: flex;
+}
+
+div nav ul {
+    display: flex;
+    gap: 10px;
+    height: 54px;
+    margin-right: 601px;
+}
+
+div.eng {
+    font-family: 'Tourney', cursive;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+
+div nav ul li {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+/*main*/
+h1 {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    display: flex;
+    margin-right: 10px;
+}
+
+sub {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    width: 100px;
+    height: 20px;
+    display: block;
+}
+
+div.title {
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000000;
+}
+
+p.section-one {
+    height: 133px;
+}
+
+p.section-two {
+    height: 230px;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+section.three {
+    display: grid;
+    row-gap: 40px;
+    height: 993px;
+}
+
+div.title.not {
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 0px;
+}
+
+span.bold {
+    font-weight: 700;
+}
+
+span.bg {
+    background-color: #DADADA;
+}
+
+p.text_container_one {
+    height: 132px;
+}
+
+p.text_container_two {
+    height: 39px;
+}
+
+p.text_container_three {
+    height: 86px;
+}
+
+p.text_container_four {
+    height: 142px;
+}
+
+p.text_container_five {
+    height: 36px;
+}
+
+p.text_container_six {
+    height: 134px;
+}
+
+section.four {
+    display: grid;
+    row-gap: 40px;
+    margin-bottom: 90px;
+}
+
+p.text_container_seven {
+    height: 133px;
+}
+
+p.text_container_eigth {
+    height: 132px;
+}
