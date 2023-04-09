@@ -1,0 +1,383 @@
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/*section 1 Architectural Photography*/
+.section1 {
+    height: 1295px;
+}
+
+div.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(3, 370px);
+    grid-gap: 30px;
+}
+
+.item {
+    position: relative;
+}
+
+.item p.right {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 20px 0;
+}
+
+.item p.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0px 20px 20px;
+}
+
+p.author {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+p.date {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E0E0E0;
+}
+
+h1 {
+    font-family: 'Delius Unicase', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+div.one {
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/1122.png);
+    width: 370px;
+    height: 370px;
+    grid-area: 1/1/2/2;
+    border-radius: 20px;
+}
+
+div.two {
+    width: 770px;
+    height: 370px;
+    grid-area: 1/2/2/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/1224.png);
+    border-radius: 20px;
+}
+
+div.three {
+    width: 770px;
+    height: 370px;
+    grid-area: 2/1/3/3;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/2133.png);
+    border-radius: 20px;
+}
+
+div.four {
+    width: 370px;
+    height: 370px;
+    grid-area: 2/3/3/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/2334.png);
+    border-radius: 20px;
+}
+
+div.five {
+    width: 370px;
+    height: 370px;
+    grid-area: 3/1/4/2;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/3142.png);
+    border-radius: 20px;
+}
+
+div.six {
+    width: 770px;
+    height: 370px;
+    grid-area: 3/2/4/4;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section1/3244.png);
+}
+
+/*section 2 Nature works*/
+.section2 {
+    height: 1695px;
+}
+
+div.gallery2 {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: 370px 770px 370px;
+    grid-gap: 30px;
+}
+
+.item2 {
+    position: relative;
+}
+
+.item2 p.right {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 20px 0;
+}
+
+.item2 p.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0px 20px 20px;
+}
+
+div.one_waterfall {
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/водоспад.png);
+    width: 370px;
+    height: 370px;
+    grid-area: 1/1/2/2;
+    border-radius: 20px;
+}
+
+div.two_ocean {
+    width: 770px;
+    height: 370px;
+    grid-area: 1/2/2/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/океан.png);
+    border-radius: 20px;
+}
+
+div.three_stones {
+    width: 770px;
+    height: 770px;
+    grid-area: 2/1/3/3;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/каміння.png);
+    border-radius: 20px;
+}
+
+div.four_river {
+    width: 370px;
+    height: 770px;
+    grid-area: 2/3/3/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/річка.png);
+    border-radius: 20px;
+}
+
+div.five_lavender {
+    width: 770px;
+    height: 370px;
+    grid-area: 3/1/4/3;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/лаванда.png);
+    border-radius: 20px;
+}
+
+div.six_tree {
+    width: 370px;
+    height: 370px;
+    grid-area: 3/3/4/4;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section2/дерево.png);
+}
+
+/*section 3 People*/
+.section3 {
+    height: 2095px;
+    padding-bottom: 120px;
+}
+
+div.gallery3 {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(5, 370px);
+    grid-gap: 30px;
+}
+
+.item3 {
+    position: relative;
+}
+
+.item3 p.right {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 20px 0;
+}
+
+.item3 p.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0px 20px 20px;
+}
+
+div.black_dress {
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/women\ in\ black\ dress.png);
+    width: 370px;
+    height: 370px;
+    grid-area: 1/1/2/2;
+    border-radius: 20px;
+}
+
+div.yellow {
+    width: 370px;
+    height: 770px;
+    grid-area: 1/2/3/3;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/women\ in\ yellow.png);
+    border-radius: 20px;
+}
+
+div.hair {
+    width: 370px;
+    height: 370px;
+    grid-area: 1/3/2/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/man\ with\ long\ hair.png);
+    border-radius: 20px;
+}
+
+div.grey {
+    width: 370px;
+    height: 370px;
+    grid-area: 2/1/3/2;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/women\ in\ grey.png);
+    border-radius: 20px;
+}
+
+div.oranges {
+    width: 370px;
+    height: 770px;
+    grid-area: 2/3/5/4;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/oranges.png);
+    border-radius: 20px;
+}
+
+div.glasses {
+    width: 370px;
+    height: 370px;
+    grid-area: 3/2/4/3;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/man\ with\ glasses.png);
+}
+
+div.on_the_bed {
+    width: 370px;
+    height: 770px;
+    grid-area: 3/1/5/2;
+    background-image: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/on\ the\ bed.png);
+    border-radius: 20px;
+}
+
+div.love {
+    width: 770px;
+    height: 370px;
+    grid-area: 4/2/5/4;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/love.png);
+}
+
+div.dreadlocks {
+    width: 770px;
+    height: 370px;
+    grid-area: 5/1/6/3;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/man\ with\ dreadlocks.png);
+}
+
+div.pair {
+    width: 370px;
+    height: 370px;
+    grid-area: 5/3/6/4;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%), url(/hw_9/images/section3/pair.png);
+}
+
+img.heart {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 0 0 20px;
+    opacity: 0;
+}
+
+img.dowload {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px 20px 0 0;
+    opacity: 0;
+}
+
+div.item3:hover img {
+    opacity: 1;
+}
+
+div.pair:hover {
+    background: url(/hw_9/images/section3/pair.png);
+}
+
+div.black_dress:hover {
+    background-image: url(/hw_9/images/section3/women\ in\ black\ dress.png);
+}
+
+div.yellow:hover {
+    background-image: url(/hw_9/images/section3/women\ in\ yellow.png);
+}
+
+div.hair:hover {
+    background-image: url(/hw_9/images/section3/man\ with\ long\ hair.png);
+}
+
+div.grey:hover {
+    background-image: url(/hw_9/images/section3/women\ in\ grey.png);
+}
+
+div.oranges:hover {
+    background-image: url(/hw_9/images/section3/oranges.png);
+
+}
+
+div.glasses:hover {
+    background: url(/hw_9/images/section3/man\ with\ glasses.png);
+}
+
+div.on_the_bed:hover {
+    background-image: url(/hw_9/images/section3/on\ the\ bed.png);
+}
+
+div.love:hover {
+    background: url(/hw_9/images/section3/love.png);
+}
+
+div.dreadlocks:hover {
+    background: url(/hw_9/images/section3/man\ with\ dreadlocks.png);
+}
