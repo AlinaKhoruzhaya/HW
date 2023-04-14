@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW-12</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="form__first container_form">
+                <div class="title">Create an Account</div>
+                <form action="http..." method="Get" name="create_an_account">
+                    <table class="formtable">
+                        <tbody>
+                            <tr class="one">
+                                <td><label for="first_name">First Name</label>
+                                <td><label for="Last_name">Last Name</label>
+                            </tr>
+                            <tr>
+                                <td> <input type="text" id="first_name" name="first_name" required autocomplete="on"
+                                        autofocus minlength="2"></td>
+                                <td> <input type="text" id="last_name" name="Last_name" required autocomplete="on"
+                                        minlength="2"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">E-mail</label></td>
+                            <tr>
+                                <td colspan="2"> <input type="email" id="email" name="email" required autocomplete="on">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label for="email" class="email">We'll never share your email with
+                                        anyone else.</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="radio">
+                                        <label class="container_radio">Male
+                                            <input type="radio" checked="checked" name="radio" id="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Female
+                                            <input type="radio" name="radio" id="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="Country">Country</label>
+                                <td><label for="City">City</label>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="selectGeneral" placeholder="Select">
+                                        <img src="images/Right.png" alt="">
+                                        <input type="radio" name="Country">
+                                        <div>
+                                            <input type="radio" name="Country" value="Argentina" id="Country">
+                                            <label for="Argentina">Argentina</label>
+                                            <input type="Armenia" name="Country" value="Armenia" id="Country">
+                                            <label for="Armenia">Armenia</label>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td> <input type="text" id="City" name="City" required autocomplete="on" minlength="3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" id="buttons" value="Sign Up">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="text">
+                    <span>By clicking the 'Sign Up' button, you confirm that you accept our</span> <br>
+                    <a href="#"> Terms of use</a>
+                    <span>and</span>
+                    <a href="#"> Privacy Policy</a>
+                </div>
+                <div class="log__in">
+                    <span class="have_an_account">Have an account?</span>
+                    <a href="#" class="log_in">Log In</a>
+                </div>
+            </div>
+            <div class="form__second container_form">
+                <div class="title">Profile</div>
+                <form action="http..." method="Get" name="Profile">
+                    <table class="formtable_first" style="width:500pt">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="avatar">
+                                        <img class="photo" src="images/foto,png" alt="">
+                                        <div class="file">
+                                            <label for="file" class="btn">
+                                                <img src="images/Camera.png" alt="">
+                                            </label>
+                                            <input id="file" style="visibility:hidden;" type="file">
+                                        </div>
+                                        <button class="reset" type="reset">
+                                            <img src="images/Right Icon.png" alt="">
+                                        </button>
+                                        <div class="description">Up to 1 MB (300x300 px)</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="Name">Name</label>
+                                <td><label for="E-mail_second_form">E-mail</label>
+                            </tr>
+                            <tr>
+                                <td> <input type="text" id="Name" name="Name" required autocomplete="on" minlength="3">
+                                </td>
+                                <td> <input type="text" id="E-mail_second_form" name="E-mail_second_form" required
+                                        autocomplete="on"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Country_second_form">Country</label>
+                                <td><label for="City_second_form">City</label>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="selectGeneral" placeholder="Select">
+                                        <img src="images/Right.png" alt="">
+                                        <input type="radio" name="Country">
+                                        <div>
+                                            <input type="radio" name="Country" value="Argentina"
+                                                id="Country_second_form">
+                                            <label for="Argentina">Argentina</label>
+                                            <input type="Armenia" name="Country" value="Armenia"
+                                                id="Country_second_form">
+                                            <label for="Armenia">Armenia</label>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td> <input type="text" id="City_second_form" name="City_second_form" required
+                                        autocomplete="on" minlength="3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="zip_code">Zip Code</label>
+                                <td><label for="phone_number">Phone Number</label>
+                            </tr>
+                            <tr>
+                                <td> <input type="text" id="zip_code" name="zip_code" required></td>
+                                <td> <input type="tel" id="phone_number" name="phone_number" required autocomplete="on">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="buttons_second" type="submit" value="Update">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
