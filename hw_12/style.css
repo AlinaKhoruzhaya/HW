@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body main .container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    background-color: #F7F7F7;
+}
+
+body main .container .container_form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 36px 44px;
+    border: 1px solid white;
+}
+
+body main .container .container_form:hover {
+    border: 1px solid #007BFF;
+}
+
+body main .container .title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+}
+
+label,
+span.have_an_account {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: #545454;
+}
+
+input {
+    margin: 7px 0;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    display: block;
+}
+
+input:focus {
+    border: 1px solid #007BFF;
+}
+
+input#first_name,
+input#last_name,
+input#City,
+input#E-mail_second_form,
+input#Name,
+input#City_second_form,
+input#zip_code,
+input#phone_number {
+    width: 239px;
+    height: 34px;
+    margin-bottom: 20px;
+}
+
+input#first_name,
+input#Name,
+input#zip_code {
+    margin-right: 10px;
+}
+
+input#email {
+    width: 494px;
+    height: 34px;
+}
+
+div.radio {
+    display: flex;
+    margin: 20px 0;
+}
+
+input[type=radio] {
+    margin-right: 8px;
+}
+
+label.container_radio {
+    margin-right: 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: #545454;
+}
+
+input#buttons {
+    width: 500px;
+    height: 38px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 6px;
+}
+
+input#buttons_second {
+    width: 150px;
+    height: 38px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 6px;
+}
+
+label.email,
+div.text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    color: #969696;
+}
+
+div.text {
+    width: 410px;
+    height: 36px;
+    margin: 10px 45px;
+    text-align: center;
+    position: relative;
+}
+
+div.text::before {
+    position: absolute;
+    bottom: -20px;
+    left: -45px;
+    width: 500px;
+    border-bottom: 1px solid #E4E4E4;
+    content: "";
+}
+
+a {
+    color: #007BFF;
+}
+
+div.log__in {
+    width: 177px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    margin: 40px 161.5px 16px 161.5px;
+}
+
+a.log_in {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+    color: #007BFF;
+    padding-left: 20px;
+}
+
+table {
+    display: inline;
+}
+
+tr.one {
+    margin-top: 20px;
+}
+
+label.selectGeneral img {
+    margin-left: 217px;
+    position: absolute;
+    z-index: 99;
+}
+
+/*select option*/
+label.selectGeneral {
+    display: block;
+    position: relative;
+    width: 245px;
+    height: 38px;
+    font-size: 0;
+    font-weight: normal;
+    margin: 2px 0;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    position: relative;
+}
+
+label.selectGeneral:before {
+    content: attr(Selected);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 34px;
+    white-space: nowrap;
+    color: #adadad;
+    overflow-x: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label.selectGeneral:after {
+    content: "<>";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 31px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #d6d6d6;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+label.selectGeneral label {
+    display: inline-block;
+    min-width: 100%;
+    height: 34px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 34px;
+    white-space: nowrap;
+    padding: 0 10px;
+    background-color: #ffffff;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label.selectGeneral input,
+label.selectGeneral label {
+    display: none;
+}
+
+label.selectGeneral div {
+    min-width: 100%;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+label.selectGeneral input[type=radio]:checked~div {
+    position: absolute;
+    top: 34px;
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: -3px 0 0 #d6d6d6, 3px 0 0 #d6d6d6;
+    border-top: 3px solid #d6d6d6;
+    border-bottom: 3px solid #d6d6d6;
+}
+
+label.selectGeneral input[type=radio]:checked~div>label,
+label.selectGeneral input[type=radio]:checked+label {
+    display: block;
+}
+
+label.selectGeneral input[type=radio]:checked~div>label:hover {
+    background-color: #007BFF;
+}
+
+label.selectGeneral input[type=radio]:not(:checked)~div>input[type=radio]:checked+label {
+    position: relative;
+    z-index: -1;
+}
+
+/*avatar*/
+.avatar {
+    display: grid;
+    grid-template-columns: 80px 170px 30px;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: "photo file reset" "photo description description";
+    margin-bottom: 20px;
+}
+
+.avatar .photo {
+    grid-area: photo;
+}
+
+.avatar .file {
+    grid-area: file;
+    margin-left: 20px;
+}
+
+.avatar .file label {
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    width: 128px;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.avatar .reset {
+    grid-area: reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.avatar .description {
+    grid-area: description;
+    margin-left: 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    color: #969696;
+}
+
+/*radio gender*/
+/* The container */
+.container_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container_radio input#radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container_radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container_radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_radio input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*# sourceMappingURL=style.css.map */
