@@ -1,0 +1,352 @@
+@import url(reset.css);
+@import url(icons.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
+
+%p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #565656;
+}
+
+%h2 {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+%h1 {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+%h3 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.5em;
+    color: #000000;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    padding: 38px 15px;
+
+    h3 {
+        @extend %h3;
+    }
+}
+
+.main {
+    .first_section {
+        h1 {
+            @extend %h1;
+            padding-bottom: 70px
+        }
+    }
+
+    .second_section {
+        padding-bottom: 96px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 574px;
+
+        h2 {
+            @extend %h2;
+            padding: 90px 0 15px 0;
+        }
+
+        p {
+            @extend %p;
+        }
+    }
+
+    .third_section {
+        h2 {
+            @extend %h2;
+            padding-bottom: 50px;
+        }
+    }
+
+    .four_section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0 90px 0;
+
+        p {
+            @extend %p;
+        }
+    }
+
+    .fifth_section {
+        h2 {
+            @extend %h2;
+            padding-bottom: 50px;
+        }
+    }
+
+    .sixth_section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0 90px 0;
+
+        p {
+            @extend %p;
+        }
+    }
+
+    .seventh_section {
+        h2 {
+            @extend %h2;
+            padding-bottom: 50px;
+        }
+    }
+
+    .eighth_section {
+        padding: 20px 0 90px 0;
+
+        p {
+            @extend %p;
+        }
+    }
+}
+
+.footer {
+    background-color: #F4F4F4;
+    padding-bottom: 30px;
+
+    .title {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        padding: 70px 0 30px 0;
+    }
+
+    .footer_text {
+        display: flex;
+        justify-content: space-between;
+
+        .contacts {
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14.71px;
+
+            a {
+                text-decoration: none;
+                @extend %h3;
+                line-height: 166%;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .link-social {
+            display: flex;
+            gap: 23px;
+
+            a {
+                text-decoration: none;
+                border: 1px solid #565656;
+                cursor: url("../images/cursor.png"), auto;
+                color: #565656;
+                font-size: 24px;
+            }
+        }
+    }
+
+    p {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+        color: #000000;
+        text-align: center;
+    }
+}
+
+#insta {
+    box-sizing: border-box;
+    padding: 13px;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+
+    &:hover {
+        background-color: #565656;
+        border: 1px solid #565656;
+        color: #fff;
+    }
+}
+
+#facebook {
+    box-sizing: border-box;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    padding: 13px 18.57px;
+
+    &:hover {
+        background-color: #565656;
+        border: 1px solid #565656;
+        color: #fff;
+    }
+}
+
+#twitter {
+    box-sizing: border-box;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+
+    padding: 13px 10.23px;
+
+    &:hover {
+        background-color: #565656;
+        border: 1px solid #565656;
+        color: #fff;
+    }
+}
+
+#linkedin {
+    box-sizing: border-box;
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+
+    padding: 13px;
+
+    &:hover {
+        background-color: #565656;
+        border: 1px solid #565656;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width:768px) {
+    %h1 {
+        font-size: 33px;
+        line-height: 50px;
+    }
+
+    .container {
+        padding: 0 33px;
+    }
+
+    .header {
+        padding: 18px 33px 68px 33px;
+    }
+
+    .main .first_section h1 {
+        padding-bottom: 50px;
+    }
+
+    main .second_section {
+        padding-bottom: 70px;
+    }
+
+    .main .four_section {
+        padding: 20px 0 70px 0;
+    }
+
+    .main .sixth_section {
+        padding: 20px 0 70px 0;
+    }
+
+    .main .eighth_section {
+        padding: 20px 0 70px 0;
+    }
+
+    .footer {
+        padding-bottom: 50px;
+    }
+
+    footer h1 {
+        text-align: center;
+    }
+
+    .footer .footer_text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer_text .contacts {
+        padding-bottom: 40px;
+    }
+
+    .footer .footer_text .contacts a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer p {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    %h1 {
+        font-size: 30px;
+    }
+
+    %h2 {
+        font-size: 26px;
+    }
+
+    %p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        padding: 18px 10px;
+    }
+
+    .main .second_section h2 {
+        padding: 70px 0 10px 0;
+    }
+
+    .footer .title {
+        font-size: 32px;
+        line-height: 42px;
+        padding: 50px 0 20px 0;
+    }
+}
