@@ -1,0 +1,103 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+%h1 {
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+%li {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.main {padding: 50px 0 100px 0;
+    .min {
+        background-color: rgb(217, 235, 199);
+
+        h1 {
+            @extend %h1;
+        }
+
+        ol {
+            .answer li {
+                font-family: 'Fira Sans Condensed', sans-serif;
+                font-weight: 300;
+                font-size: 25px;
+                color: blue;
+                padding: 0
+            }
+
+            li {
+                @extend %li;
+                padding: 15px 0;
+            }
+        }
+
+        p {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: 300;
+            font-size: 25px;
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .answer li {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: 300;
+            font-size: 25px;
+            color: blue;
+        }
+
+        div {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: 300;
+            font-size: 25px;
+            color: blue;
+        }
+    }
+
+    .norm {
+        background-color: rgb(239, 237, 209);
+
+        h1 {
+            @extend %h1;
+        }
+
+        ol li {
+            @extend %li;
+            padding: 15px 0;
+        }
+    }
+
+    .max {
+        background-color: rgb(228, 191, 191);
+
+        h1 {
+            @extend %h1;
+        }
+
+        ol li {
+            @extend %li;
+            padding: 15px 0;
+        }
+    }
+}
+
+span {
+    font-family: 'Marck Script', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    color: darkgreen;
+}
