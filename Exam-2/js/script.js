@@ -11,6 +11,9 @@ const HEADER_SLIDER = new Swiper('.header_slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  autoplay: {
+    delay: 1000
+  }
 });
 
 //slider2
@@ -130,7 +133,7 @@ window.onscroll = () => {
   });
 };
 
-//form clearing when updating
+//form clearing if updating
 $('#form_id')[0].reset();
 
 //gamburger menu

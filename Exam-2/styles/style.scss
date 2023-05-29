@@ -335,6 +335,22 @@ $colors: (
     }
 }
 
+.img_bg_header_second {
+    filter: hue-rotate(90deg);
+}
+
+.img_bg_header_third {
+    filter: hue-rotate(-90deg);
+}
+
+.img_bg_header_fourth {
+    filter: hue-rotate(390deg);
+}
+
+.img_bg_header_fifth {
+    filter: hue-rotate(690deg);
+}
+
 #facebook:hover,
 #twitter:hover,
 #insta:hover {
@@ -980,6 +996,7 @@ $colors: (
 
     &:hover {
         color: $hover;
+
         &::before,
         &::after {
             border-color: $hover;
@@ -1125,7 +1142,7 @@ i.closeIcon {
 
 @media screen and (max-width:1360px) {
     .main .news .container_news .container_new {
- width: 770px;
+        width: 770px;
     }
 }
 
