@@ -6,7 +6,6 @@ const HEADER_SLIDER = new Swiper('.header_slider', {
   direction: 'vertical',
   loop: true,
 
-
   //pagination
   pagination: {
     el: '.swiper-pagination',
@@ -18,13 +17,12 @@ const HEADER_SLIDER = new Swiper('.header_slider', {
 const NEWS_SLIDER = new Swiper('.news_slider', {
   direction: 'horizontal',
   loop: true,
-  loopedSlides: 2,
-  slidesPerView: 2,
-  spaceBetween: 2,
+  slidesPerView: 1,
+  spaceBetween: 0,
 
   //pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination__news',
     clickable: true,
   },
   navigation: {
@@ -37,24 +35,16 @@ const NEWS_SLIDER = new Swiper('.news_slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 2
     },
-    480: {
+    1000: {
       slidesPerView: 2,
-      spaceBetween: 20
-    },
-    640: {
-      slidesPerView: 3,
       spaceBetween: 30
     },
-    1500: {
+    1360: {
       slidesPerView: 3,
       spaceBetween: 30
     }
   },
-  autoplay: {
-    delay: 1000
-  }
 });
 
 //scroll
@@ -123,7 +113,7 @@ window.addEventListener('scroll', function () {
 const sections = document.querySelectorAll(".activ_link_scroll");
 const navLi = document.querySelectorAll(".header_wrapper .menu li a");
 window.onscroll = () => {
-  var current = "";
+  let current = "";
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
