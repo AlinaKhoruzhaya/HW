@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@mixin color_bg_header {
+    background-color: #2B2B31;
+}
+
+@mixin color_bg_logo {
+    background-color: #28282D;
+}
+
+@mixin main_font {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin header_links_hover {
+    color: #ff55a5;
+}
+
+@mixin button_header {
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+    opacity: .85;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    @include color_bg_header;
+    position: fixed;
+
+    .header_container {
+        display: grid;
+        grid-template-columns: 248px 1fr 232px 84px 130px 40px;
+        align-items: center;
+        height: 80px;
+
+        .logo {
+            width: 248px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include color_bg_logo;
+
+            &:hover {
+                @include color_bg_header;
+            }
+
+            a {
+                img {
+                    max-width: 120px;
+                }
+            }
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            li {
+                height: 80px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                &:hover a {
+                    @include header_links_hover;
+                }
+
+                a {
+                    @include main_font;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.75);
+
+                    .active {
+                        border-bottom: 1px solid #ff55a5;
+                    }
+                }
+            }
+        }
+
+        // .search {
+        //     position: relative;
+
+        //     input {
+        //         background: transparent;
+        //         @include main_font;
+        //         width: 232px;
+        //         height: 40px;
+        //         border-radius: 6px;
+        //         box-sizing: border-box;
+        //         outline: none;
+        //         @include color_bg_logo;
+        //         border: 2px solid transparent;
+        //         font-size: 16px;
+        //         color: #fff;
+        //         padding-left: 20px;
+        //     }
+
+        //     svg {
+        //         position: absolute;
+        //         right: 20px;
+        //         bottom: 50%;
+        //         transform: translateY(50%);
+
+        //         path {
+        //             &:hover {
+        //                 fill: #ff55a5;
+        //             }
+        //         }
+        //     }
+        // }
+
+        .favourites {
+            display: flex;
+            justify-content: center;
+
+            svg {
+                fill: #f6f6f5;
+                transition: 0.4s;
+                width: 24px;
+                height: 24px;
+                box-sizing: border-box;
+
+                path {
+                    &:hover {
+                        fill: #ff55a5;
+                    }
+                }
+            }
+        }
+
+        .account {
+            button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 130px;
+                @include button_header;
+                border: 1px solid #ff55a5;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    @include main_font;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.6px;
+                }
+            }
+        }
+
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+
+            &:hover span {
+                background-color: #ff55a5;
+            }
+
+            span {
+                width: 40px;
+                height: 2px;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        .header_container {
+            grid-template-columns: 3fr 1fr .5fr 1fr .5fr;
+
+            .logo {
+                width: 210px;
+
+                &:hover {
+                    @include color_bg_header;
+                }
+
+                a {
+                    img {
+                        max-width: 120px;
+                    }
+                }
+            }
+
+            nav {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+
+    .container {
+        max-width: 720px;
+    }
+
+    .header {
+        .header_container {
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+
+            .logo {
+                margin-right: 168px;
+            }
+
+            .search {
+                input {
+                    display: none;
+                }
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 510px;
+    }
+
+    .header {
+        .header_container {
+            height: 70px;
+
+            .logo {
+                width: 157px;
+                height: 70px;
+                margin-right: 139px;
+
+                a {
+                    img {
+                        max-width: 100px;
+                        max-height: 30px;
+                    }
+                }
+            }
+
+            .account {
+                button {
+                    height: 40px;
+                    width: 40px;
+                    position: relative;
+
+                    &::before {
+                        content: url(../componets/img/Sign_in.svg);
+                        position: absolute;
+                        bottom: 50%;
+                        right: 50%;
+                        transform: translateX(50%) translateY(50%);
+                        width: 22px;
+                        height: 22px;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+
+    .header {
+        .container {
+            max-width: 545px;
+            justify-content: space-around;
+        }
+    }
+
+    .header {
+        .header_container {
+
+            .logo {
+                max-width: 140px;
+                margin-right: 0;
+
+                a {
+                    img {
+                        max-width: 100px;
+                        max-height: 30px;
+                    }
+                }
+            }
+
+            .account {
+                button {
+                    height: 40px;
+                    width: 40px;
+                    position: relative;
+
+                    &::before {
+                        content: url(../componets/img/Sign_in.svg);
+                        position: absolute;
+                        bottom: 50%;
+                        right: 50%;
+                        transform: translateX(50%) translateY(50%);
+                        width: 22px;
+                        height: 22px;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .header {
+        .container {
+            max-width: 329px;
+        }
+    }
+
+    .header {
+        .header_container {
+
+            .logo {
+                min-width: 110px;
+
+                a {
+                    img {
+                        max-width: 80px;
+                        max-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+
+    .header {
+        .container {
+            max-width: 270px;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
