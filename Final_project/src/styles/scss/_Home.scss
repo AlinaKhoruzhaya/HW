@@ -1,0 +1,76 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+    background: url(../../componets/img/Home/home__bg.jpg) center center / cover no-repeat;
+
+    .blok_content {
+        padding-top: 100px;
+        position: relative;
+
+        .blok_title {
+            .title_first_part {
+                font-weight: 500;
+                font-size: 36px;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Ubuntu', sans-serif;
+                line-height: 1.5;
+                text-align: left;
+            }
+
+            .title_second_part {
+                font-weight: 300;
+                font-size: 36px;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Ubuntu', sans-serif;
+                line-height: 1.5;
+                text-align: left;
+            }
+
+            .blok_button {}
+        }
+    }
+
+    .swiper {
+        padding-top: 50px;
+        position: static;
+
+
+        a {
+            img {
+                width: 247px;
+                height: 367px;
+            }
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            top: 131px;
+            z-index: 1;
+            left: var(--swiper-navigation-sides-offset, 1038px);
+            opacity: 1;
+
+            &::before {
+                content: '';
+                color: #FFF;
+            }
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            top: 131px;
+            z-index: 1;
+            right: var(--swiper-navigation-sides-offset, 0px);
+            opacity: 1;
+
+            &::before {
+                content: '';
+                color: #FFF;
+            }
+        }
+
+    }
+
+
+}

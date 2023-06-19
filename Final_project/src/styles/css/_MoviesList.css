@@ -1,0 +1,11 @@
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 247px);
+  gap: 40px;
+}
+.movies .movie img {
+  width: 247px;
+  height: 367px;
+}
+
+/*# sourceMappingURL=MoviesList.css.map */

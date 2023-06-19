@@ -8,7 +8,7 @@ function MainMenu(props) {
     );
 
     return (
-        <nav>
+        <nav className="nav">
             <ul>{listItems}</ul>
         </nav>
     );

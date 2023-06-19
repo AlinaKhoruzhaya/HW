@@ -2,9 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import * as React from 'react';
-
-// import 'reset-css';
-// import "../../styles/MoviesList.css";
+import { HeaderSvgSearch } from "../svg/HeaderSvgSearch.tsx";
 
 
 const baseSearchURL = 'https://api.themoviedb.org/3/search/movie';
@@ -66,10 +64,14 @@ function Search() {
                         <input
                             type="text"
                             value={search}
+                            placeholder="Search..."
                             onChange={(e) => setSearch(e.target.value)}
                         />
+                        <HeaderSvgSearch id="search" />
+                        <input id='search_button' type="submit" value='S' />
                     </label>
-                    <input type="submit" value='Search' />
+
+
                 </form>
                 <div className="search">{items}</div>
             </div>

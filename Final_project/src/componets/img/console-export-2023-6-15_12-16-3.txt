@@ -1,2 +1,0 @@
-Expected color but found ‘#transparent’.  Error in parsing value for ‘color’.  Declaration dropped. movies
-Error in parsing value for ‘background’.  Declaration dropped. movies

@@ -1,0 +1,59 @@
+.bg {
+  width: 100%;
+  height: 100vh;
+  background: url(../../componets/img/Home/home__bg.jpg) center center/cover no-repeat;
+}
+.bg .blok_content {
+  padding-top: 100px;
+  position: relative;
+}
+.bg .blok_content .blok_title .title_first_part {
+  font-weight: 500;
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+.bg .blok_content .blok_title .title_second_part {
+  font-weight: 300;
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+.bg .swiper {
+  padding-top: 50px;
+  position: static;
+}
+.bg .swiper a img {
+  width: 247px;
+  height: 367px;
+}
+.bg .swiper .swiper-button-prev {
+  position: absolute;
+  top: 131px;
+  z-index: 1;
+  left: var(--swiper-navigation-sides-offset, 1038px);
+  opacity: 1;
+}
+.bg .swiper .swiper-button-prev::before {
+  content: "";
+  color: #FFF;
+}
+.bg .swiper .swiper-button-next {
+  position: absolute;
+  top: 131px;
+  z-index: 1;
+  right: var(--swiper-navigation-sides-offset, 0px);
+  opacity: 1;
+}
+.bg .swiper .swiper-button-next::before {
+  content: "";
+  color: #FFF;
+}
+
+/*# sourceMappingURL=_Home.css.map */

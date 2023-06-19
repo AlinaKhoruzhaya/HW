@@ -7,6 +7,7 @@ import ContactsPage from "./componets/pages/ContactsPage.js";
 import NotFoundPage from "./componets/pages/NotFoundPage.js";
 import Layout from './componets/layout/Layout';
 import MoviePage from './componets/pages/MoviePage';
+import "../src/styles/App.css"
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movie/:id" element={<MoviePage />} />
         <Route path="*" element={<NotFoundPage />} />
+
+
       </Route>
     </Routes >
   );
