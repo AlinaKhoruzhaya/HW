@@ -42,7 +42,7 @@ const SingleMovie = () => {
                     <div className="movie">
                         <img className="poster_single_movie" src={imgBaseURL + movie.poster_path} />
                         <div className="info_movie">
-                            <p className="rating">{movie.vote_average}</p>
+                            <p className="rating">{movie.vote_average.toFixed(1)}</p>
                             <p className="runtime">Running time: {movie.runtime} min</p>
                             <p className="release_date">Premiere: {movie.release_date}</p>
                             <p className="tagline">Tagline: {movie.tagline}</p>
