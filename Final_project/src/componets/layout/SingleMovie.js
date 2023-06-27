@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const baseURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
 const imgBaseURL = "https://image.tmdb.org/t/p/w500"
@@ -34,6 +33,13 @@ const SingleMovie = () => {
     if (error) {
         return (<div className="error"> <h2>{error}</h2> </div>)
     } else if (movie) {
+        let genre = [];
+        console.log(movie)
+            movie.genres.map((val, index) => {
+                genre.push(val.name)
+            })
+        genre = genre.join(', ');
+
         return (
             <div className="bg_single_movie">
                 <div className="img_bg_single_movie"></div>
@@ -42,15 +48,16 @@ const SingleMovie = () => {
                     <div className="movie">
                         <img className="poster_single_movie" src={imgBaseURL + movie.poster_path} />
                         <div className="info_movie">
-                            <p className="rating">{movie.vote_average}</p>
+                            <p className="rating">{Math.round(movie.vote_average)}</p>
                             <p className="runtime">Running time: {movie.runtime} min</p>
                             <p className="release_date">Premiere: {movie.release_date}</p>
                             <p className="tagline">Tagline: {movie.tagline}</p>
                         </div>
                     </div >
                     <p className="overview">{movie.overview}</p>
-                </div >
-            </div >
+                    <div>{genre}</div>
+                </div>
+            </div>
 
         )
     };
