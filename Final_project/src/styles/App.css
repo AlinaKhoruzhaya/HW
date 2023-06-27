@@ -5,6 +5,8 @@
 @import url(css/_Home.css);
 @import url(css/_MoviesList.css);
 @import url(css/_Sidebar.css);
+@import url(css/_SingleMovie.css);
+/* @import url(css/_Slide.css); */
 
 * {
     box-sizing: border-box;

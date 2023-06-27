@@ -2,15 +2,15 @@
   width: 100%;
   background-color: #2B2B31;
   position: fixed;
+  z-index: 100;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
-
 .header .header_container {
   display: grid;
   grid-template-columns: 248px 1fr 232px 84px 130px 40px;
   align-items: center;
   height: 80px;
 }
-
 .header .header_container .logo {
   width: 248px;
   height: 80px;
@@ -19,32 +19,26 @@
   align-items: center;
   background-color: #28282D;
 }
-
 .header .header_container .logo:hover {
   background-color: #2B2B31;
 }
-
 .header .header_container .logo a img {
   max-width: 120px;
 }
-
 .header .header_container .nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
 .header .header_container .nav ul li {
   height: 80px;
   justify-content: center;
   align-items: center;
   display: flex;
 }
-
 .header .header_container .nav ul li:hover a {
   color: #ff55a5;
 }
-
 .header .header_container .nav ul li a {
   font-family: "Ubuntu", sans-serif;
   text-decoration: none;
@@ -53,15 +47,12 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.75);
 }
-
 .header .header_container .nav ul li a .active {
   border-bottom: 1px solid #ff55a5;
 }
-
 .header .header_container form {
   position: relative;
 }
-
 .header .header_container form label input {
   background: transparent;
   font-family: "Ubuntu", sans-serif;
@@ -76,18 +67,15 @@
   color: #fff;
   padding-left: 20px;
 }
-
 .header .header_container form label svg {
   position: absolute;
   right: 20px;
   bottom: 50%;
   transform: translateY(50%);
 }
-
 .header .header_container form label svg path:hover {
   fill: #ff55a5;
 }
-
 .header .header_container form label input#search_button {
   width: 30px;
   height: 30px;
@@ -97,7 +85,6 @@
   transform: translateY(50%);
   opacity: 0;
 }
-
 .header .header_container .search {
   position: absolute;
   background-color: #2B2B31;
@@ -112,7 +99,6 @@
   border-radius: 4px;
   margin-top: 19px;
 }
-
 .header .header_container .search::before {
   content: "";
   position: absolute;
@@ -124,7 +110,6 @@
   background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
   box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
 }
-
 .header .header_container .movie a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
@@ -133,16 +118,13 @@
   line-height: 40px;
   font-weight: 300;
 }
-
 .header .header_container .movie a:hover {
   color: #ff55a5;
 }
-
 .header .favourites {
   display: flex;
   justify-content: center;
 }
-
 .header .favourites svg {
   fill: #f6f6f5;
   transition: 0.4s;
@@ -150,11 +132,9 @@
   height: 24px;
   box-sizing: border-box;
 }
-
 .header .favourites svg path:hover {
   fill: #ff55a5;
 }
-
 .header .account button {
   display: flex;
   flex-direction: row;
@@ -168,11 +148,9 @@
   border-radius: 4px;
   border: 1px solid #ff55a5;
 }
-
 .header .account button:hover {
   opacity: 1;
 }
-
 .header .account button span {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
@@ -181,7 +159,6 @@
   font-weight: 500;
   letter-spacing: 0.6px;
 }
-
 .header .burger-menu {
   display: none;
 }
@@ -190,80 +167,64 @@
   .header .header_container {
     grid-template-columns: 3fr 1fr 0.5fr 1fr 0.5fr;
   }
-
   .header .header_container .logo {
     width: 210px;
   }
-
   .header .header_container .logo:hover {
     background-color: #2B2B31;
   }
-
   .header .header_container .logo a img {
     max-width: 120px;
   }
-
   .header .header_container .nav {
     display: none;
   }
-
   .header .header_container .burger-menu {
     display: flex;
   }
 }
-
 @media (max-width: 990px) {
   .container {
     max-width: 720px;
   }
-
   .header .header_container {
     display: flex;
     justify-content: end;
     gap: 30px;
   }
-
   .header .header_container .logo {
     margin-right: 168px;
   }
-
   .header .header_container form label input {
     display: none;
   }
-
   .header .header_container form label svg {
     width: 22px;
     height: 22px;
     right: 0;
   }
 }
-
 @media (max-width: 768px) {
   .container {
     max-width: 510px;
   }
-
   .header .header_container {
     height: 70px;
   }
-
   .header .header_container .logo {
     width: 157px;
     height: 70px;
     margin-right: 139px;
   }
-
   .header .header_container .logo a img {
     max-width: 100px;
     max-height: 30px;
   }
-
   .header .header_container .account button {
     height: 40px;
     width: 40px;
     position: relative;
   }
-
   .header .header_container .account button::before {
     content: url(../../componets/img/Sign_in.svg);
     position: absolute;
@@ -273,34 +234,28 @@
     width: 22px;
     height: 22px;
   }
-
   .header .header_container .account button span {
     display: none;
   }
 }
-
 @media (max-width: 575px) {
   .header .container {
     max-width: 545px;
     justify-content: space-around;
   }
-
   .header .header_container .logo {
     max-width: 140px;
     margin-right: 0;
   }
-
   .header .header_container .logo a img {
     max-width: 100px;
     max-height: 30px;
   }
-
   .header .header_container .account button {
     height: 40px;
     width: 40px;
     position: relative;
   }
-
   .header .header_container .account button::before {
     content: url(../../componets/img/Sign_in.svg);
     position: absolute;
@@ -310,27 +265,22 @@
     width: 22px;
     height: 22px;
   }
-
   .header .header_container .account button span {
     display: none;
   }
 }
-
 @media (max-width: 445px) {
   .header .container {
     max-width: 329px;
   }
-
   .header .header_container .logo {
     min-width: 110px;
   }
-
   .header .header_container .logo a img {
     max-width: 80px;
     max-height: 24px;
   }
 }
-
 @media (max-width: 350px) {
   .header .container {
     max-width: 270px;

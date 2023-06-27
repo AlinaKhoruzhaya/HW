@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import MainSlider from "../layout/MainSlider.js";
-import MainSliderBg from "../layout/MainSliderBg.js";
+// import MainSlider from "../layout/MainSlider.js";
+import MainSliderHome from "../layout/MainSliderHome.js";
+import React from "react";
+
 
 function Home() {
     useEffect(() => {
@@ -8,12 +10,8 @@ function Home() {
     }, []);
 
     return (
+        <MainSliderHome />)
 
-
-
-        < MainSlider />
-
-    )
 }
 
 export default Home;

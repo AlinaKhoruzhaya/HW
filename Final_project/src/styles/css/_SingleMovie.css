@@ -1,0 +1,67 @@
+.bg_single_movie {
+  position: relative;
+  background: #2a2a30;
+  min-height: 100vh;
+}
+.bg_single_movie .img_bg_single_movie {
+  background: url(../../componets/img/Single_movie/Bg_single_movie.jpg) center center/cover no-repeat;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.bg_single_movie .container_single_movie {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+.bg_single_movie .container_single_movie .name_movie {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 42px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.bg_single_movie .container_single_movie .movie {
+  display: flex;
+  gap: 20px;
+  width: calc(100% - 216px);
+  height: 278px;
+}
+.bg_single_movie .container_single_movie .movie .poster_single_movie {
+  max-width: 196px;
+  border-radius: 7px;
+}
+.bg_single_movie .container_single_movie .movie .info_movie .rating {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+  text-align: left;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+.bg_single_movie .container_single_movie .movie .info_movie .rating::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  background: url("../../componets/img/Star.svg") no-repeat center;
+  background-size: 100% auto;
+}
+
+/*# sourceMappingURL=_SingleMovie.css.map */

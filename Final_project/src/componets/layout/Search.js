@@ -41,7 +41,7 @@ function Search() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(search)
+        // console.log(search)
         navigate('/search/' + search);
     }
 

@@ -8,15 +8,30 @@ import { Typography } from "@mui/material";
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
-const imgBaseURL = "https://image.tmdb.org/t/p/w500"
+const imgBaseURL = "https://image.tmdb.org/t/p/w500";
+const genresURL = 'https://api.themoviedb.org/3/genre/movie/list';
 
 function MoviesList() {
     const [movies, setMovies] = useState(null);
     const [error, setError] = useState(null);
     const [page, setPage] = React.useState(1);
     const [total_pages, setTotalPages] = React.useState(100);
+    const [genre_ids, setGenreIds] = useState([]);
 
     async function fetchData(currentPage) {
+        axios.get(genresURL, {
+            params: {
+                api_key: apiKey,
+            }
+        })
+            .then(response => {
+
+                setGenreIds(response.data.genres);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
 
         axios.get(baseURL, {
             params: {
@@ -25,6 +40,7 @@ function MoviesList() {
             }
         })
             .then(response => {
+                // setGenreIds()
                 setMovies(response.data.results);
 
                 let totalPages = response.data.total_pages;
@@ -52,32 +68,55 @@ function MoviesList() {
         return (<div className="error"> <h2>{error}</h2> </div>)
     } else if (movies) {
 
-        const items = movies.map((movie, index) =>
-            <div key={index} className="movie">
+
+        const items = movies.map((movie, index) => {
+            let genre = [];
+            let genreIds = movie.genre_ids;
+
+            for (let i = 0; i < genreIds.length; i++) {
+                let id = genreIds[i];
+                for (let q = 0; q < genre_ids.length; q++) {
+                    let api_id = genre_ids[q].id
+                    if (id === api_id) {
+                        genre.push(genre_ids[q].name);
+                    }
+                }
+            }
+            // genre = genre.toString();
+            genre = genre.join(', ');
+            return (<div key={index} className="movie">
 
                 <img src={imgBaseURL + movie.poster_path} />
+                <div className="card_content">
+                    <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+                    {/* <h2>{movie.title}</h2> */}
+                    <p className="genre">{genre}</p>
+                    <p className="rating">{movie.vote_average}</p>
+                    {/* <Link to={"/movie/" + movie.id}>More</Link> */}
+                </div>
+            </div>)
+        });
 
-                <h2>{movie.title}</h2>
-                <Link to={"/movie/" + movie.id}>More</Link>
-            </div>
-        );
+        const titleMovies = {
+            part_first: 'watch',
+            part_second: 'online',
+        }
 
         return (
-            <div className="container">
-
-                <div className="movies">{items}</div>
-
-                <Stack spacing={10}>
-                    <Typography> Page: {page}</Typography>
-                    <Pagination count={total_pages} page={page} color="secondary" onChange={handleChange} />
-                </Stack>
-
-                {/* <Stack spacing={10}>
-                    <Pagination count={10} />
-                    <Pagination count={10} color="primary" />
-                    <Pagination count={10} color="secondary" />
-                    <Pagination count={10} disabled />
-                </Stack> */}
+            <div className="bg">
+                <div className="container">
+                    <div className="title_movies">
+                        <span className='title_movies_first_part'> {titleMovies.part_first}</span>
+                        <span className='title_movies_second_part'> {titleMovies.part_second}</span>
+                    </div>
+                    <div className="movies">{items}</div>
+                    <div className="pagination">
+                        <Stack spacing={0}>
+                            {/* <Typography> Page: {page}</Typography> */}
+                            <Pagination count={total_pages} page={page} color='standard' onChange={handleChange} />
+                        </Stack>
+                    </div>
+                </div>
             </div>
         )
     }

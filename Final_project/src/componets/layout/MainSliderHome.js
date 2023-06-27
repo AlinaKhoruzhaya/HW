@@ -1,21 +1,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, FreeMode, Thumbs } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as React from 'react';
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
 
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
 const imgBaseURL = "https://image.tmdb.org/t/p/w500"
 
-
-function MainSlider() {
+function MainSliderHome() {
     const [movies, setMovies] = useState(null);
     const [error, setError] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     async function fetchData() {
         axios.get(baseURL, {
@@ -50,36 +52,42 @@ function MainSlider() {
             </SwiperSlide>
         );
 
-        const homeTitle = {
-            part_first: 'new items',
-            part_second: 'of this season',
-        }
+        // const homeTitle = {
+        //     part_first: 'new items',
+        //     part_second: 'of this season',
+        // }
 
         return (
-            <div className='bg'>
-                <div className='container'>
-                    <div className='blok_content'>
-                        <div className='blok_title'>
-                            <span className='title_first_part'> {homeTitle.part_first}</span>
-                            <span className='title_second_part'> {homeTitle.part_second}</span>
-                        </div>
+            <>
+                <Swiper
+                    // style={{
+                    //     "--swiper-navigation-color": "#fff",
+                    //     "--swiper-pagination-color": "#fff",
+                    // }}
+                    spaceBetween={10}
+                    navigation={true}
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper2"
+                >
+                    {items}
+                </Swiper >
 
-                        <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            spaceBetween={40}
-                            slidesPerView={4}
-                            navigation
-                            scrollbar={{ draggable: true }}
-                            onSwiper={(swiper) => console.log(swiper)}
-                            onSlideChange={() => console.log('slide change')}
-                        >
-                            {items}
-                        </Swiper>
-                    </div>
-                </div>
-            </div >
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={40}
+                    slidesPerView={4}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper"
+                >
+                    {items}
+                </Swiper>
+            </>
         );
     }
 }
 
-export default MainSlider;
+export default MainSliderHome;
+

@@ -1,21 +1,150 @@
-.movies {
-    display: grid;
-    grid-template-columns: repeat(4, 247px);
-    gap: 40px;
+.bg {
+    background-color: #2B2B31;
 
-    .movie {
-        img {
-            width: 247px;
-            height: 367px;
+    .title_movies {
+        padding: 70px 0 50px;
+
+        .title_movies_first_part {
+            font-weight: 500;
+            font-size: 36px;
+            color: #fff;
+            text-transform: uppercase;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.5;
+            text-align: left;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .title_movies_second_part {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            font-size: 36px;
+            color: #fff;
+            text-transform: uppercase;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.5;
+            text-align: left;
+        }
+    }
+
+    .movies {
+        display: grid;
+        grid-template-columns: repeat(4, 247px);
+        gap: 40px;
+
+        .movie {
+            img {
+                width: 247px;
+                height: 367px;
+            }
+
+            .card_content {
+                max-width: 247px;
+                max-height: 85px;
+                box-sizing: border-box;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 10px;
+                width: 100%;
+
+                a {
+                    text-decoration: none;
+
+                    h2 {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-family: 'Ubuntu', sans-serif;
+                        line-height: 1.5;
+                        text-align: left;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 210px;
+                    }
+                }
+
+                .genre {
+                    font-family: 'Open Sans', sans-serif;
+                    line-height: 1.5;
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #ff5860;
+                    text-align: left;
+                    position: relative;
+                    background-image: -webkit-linear-gradient(0deg, #ff55a5 0%, #ff5860 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    margin-top: 5px;
+                    opacity: 0.8;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 210px;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .rating {
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #fff;
+                    line-height: 1.5;
+                    text-align: left;
+                    position: relative;
+                    display: inline-flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 5px;
+                    padding-left: 20px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 16px;
+                        background: url("../../componets/img/Star.svg") no-repeat center;
+                        background-size: 100% auto;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+
+        ul li {
+            button {
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+
+                &:hover {
+                    background-color: #ff55a5;
+                }
+
+                &:active {
+                    background-color: #ff55a5;
+                }
+            }
+
+            div {
+                color: #fff;
+            }
         }
     }
 }
-
-// .css-19micn4-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected2 {
-//     background-color: #ff55a5;
-//     opacity: .85;
-
-//     &:hover {
-//         opacity: 1;
-//     }
-// }
