@@ -66,7 +66,7 @@ function MainSliderHome() {
                     // }}
                     spaceBetween={10}
                     navigation={true}
-                    thumbs={{ swiper: thumbsSwiper }}
+                    thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2"
                 >
