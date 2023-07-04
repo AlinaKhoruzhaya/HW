@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ContactsList from "../layout/ContactsList";
 
 function Contacts() {
     useEffect(() => {
@@ -6,7 +7,7 @@ function Contacts() {
     }, []);
 
     return (
-        <div> Contacts Page</div>
+        <ContactsList />
     )
 }
 

@@ -6,7 +6,10 @@
 @import url(css/_MoviesList.css);
 @import url(css/_Sidebar.css);
 @import url(css/_SingleMovie.css);
-/* @import url(css/_Slide.css); */
+@import url(css/_SearchList.css);
+@import url(css/_ErrorPage.css);
+@import url(css/_ContactsPage.css);
+@import url(css/_SignInPage.css);
 
 * {
     box-sizing: border-box;
@@ -18,9 +21,17 @@
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
+
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 main {

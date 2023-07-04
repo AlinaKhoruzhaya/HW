@@ -1,36 +1,13 @@
-@mixin color_bg_header {
-    background-color: #2B2B31;
-}
-
-@mixin color_bg_logo {
-    background-color: #28282D;
-}
-
-@mixin main_font {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-@mixin header_links_hover {
-    color: #ff55a5;
-}
-
-@mixin button_header {
-    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
-    box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
-    opacity: .85;
-    border-radius: 4px;
-}
-
 .header {
     width: 100%;
-    @include color_bg_header;
+    background-color: #2B2B31;
     position: fixed;
     z-index: 100;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
     .header_container {
         display: grid;
-        grid-template-columns: 248px 1fr 232px 84px 130px 40px;
+        grid-template-columns: 248px 1fr 232px 84px 130px;
         align-items: center;
         height: 80px;
 
@@ -40,10 +17,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            @include color_bg_logo;
+            background-color: #28282D;
+            transition: 0.5s ease;
+            cursor: pointer;
 
             &:hover {
-                @include color_bg_header;
+                background-color: #2B2B31;
             }
 
             a {
@@ -56,7 +35,7 @@
         .nav ul {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
 
             li {
                 height: 80px;
@@ -65,11 +44,11 @@
                 display: flex;
 
                 &:hover a {
-                    @include header_links_hover;
+                    color: #ff55a5;
                 }
 
                 a {
-                    @include main_font;
+                    font-family: 'Ubuntu', sans-serif;
                     text-decoration: none;
                     font-size: 14px;
                     font-weight: 400;
@@ -87,26 +66,27 @@
             position: relative;
 
             label {
-
-
                 input {
                     background: transparent;
-                    @include main_font;
-                    width: 232px;
-                    height: 40px;
-                    border-radius: 6px;
+                    font-family: 'Ubuntu', sans-serif;
                     box-sizing: border-box;
                     outline: none;
-                    @include color_bg_logo;
-                    border: 2px solid transparent;
                     font-size: 16px;
-                    color: #fff;
                     padding-left: 20px;
+                    width: 196px;
+                    height: 46px;
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    background-color: #28282d;
+                    border-radius: 8px;
+                    padding: 0 60px 0 20px;
+                    font-weight: 400;
+                    color: #fff;
+                    transition: 0.5s ease;
                 }
 
                 svg {
                     position: absolute;
-                    right: 20px;
+                    right: 30px;
                     bottom: 50%;
                     transform: translateY(50%);
 
@@ -125,14 +105,13 @@
                     bottom: 50%;
                     transform: translateY(50%);
                     opacity: 0;
-
                 }
             }
         }
 
         .search {
             position: absolute;
-            @include color_bg_header;
+            background-color: #2B2B31;
             z-index: 2;
             max-width: 232px;
             gap: 5px;
@@ -157,7 +136,6 @@
             }
         }
 
-
         .movie {
             a {
                 text-decoration: none;
@@ -166,7 +144,6 @@
                 font-size: 16px;
                 line-height: 40px;
                 font-weight: 300;
-
 
                 &:hover {
                     color: #ff55a5;
@@ -178,23 +155,29 @@
     .favourites {
         display: flex;
         justify-content: center;
+        cursor: pointer;
 
         svg {
-            fill: #f6f6f5;
-            transition: 0.4s;
-            width: 24px;
-            height: 24px;
+            width: 30px;
+            height: 30px;
             box-sizing: border-box;
+            transition: 0.5s ease;
 
-            path {
-                &:hover {
-                    fill: #ff55a5;
-                }
+            &:hover path.st11 {
+                fill: #ff5860;
+            }
+
+            &:hover path.st12 {
+                fill: #ff55a5;
             }
         }
     }
 
+
+
     .account {
+        text-decoration: none;
+
         button {
             display: flex;
             flex-direction: row;
@@ -202,16 +185,43 @@
             align-items: center;
             height: 50px;
             width: 130px;
-            @include button_header;
+            background-image: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+            box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.3);
+            border-radius: 8px;
             border: 1px solid #ff55a5;
+            position: relative;
+            transition: 0.5s ease;
+            cursor: pointer;
 
             &:hover {
+                transition: opacity .9s ease;
+                box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.6);
+                background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+                border-radius: 8px;
+                opacity: 0;
+                transition: opacity .9s ease;
+                border-radius: inherit;
+            }
+
+            :hover:before {
                 opacity: 1;
+                transition: opacity .9s ease;
             }
 
             span {
                 text-transform: uppercase;
-                @include main_font;
+                font-family: 'Ubuntu', sans-serif;
                 color: #fff;
                 font-size: 14px;
                 font-weight: 500;
@@ -220,24 +230,11 @@
         }
     }
 
+
     .burger-menu {
         display: none;
-        // flex-direction: column;
-        // gap: 10px;
-
-        // &:hover span {
-        //     background-color: #ff55a5;
-        // }
-
-        // span {
-        //     width: 40px;
-        //     height: 2px;
-        //     background-color: #fff;
-        // }
-
     }
 }
-
 
 @media (max-width: 1200px) {
     .header {
@@ -248,7 +245,7 @@
                 width: 210px;
 
                 &:hover {
-                    @include color_bg_header;
+                    background-color: #2B2B31;
                 }
 
                 a {
@@ -325,13 +322,14 @@
             }
 
             .account {
+
                 button {
                     height: 40px;
                     width: 40px;
                     position: relative;
 
                     &::before {
-                        content: url(../../componets/img/Sign_in.svg);
+                        content: url(../../componets/img/Header/Sign_in.svg);
                         position: absolute;
                         bottom: 50%;
                         right: 50%;
@@ -348,6 +346,7 @@
         }
     }
 }
+
 
 @media (max-width: 575px) {
 
@@ -380,7 +379,7 @@
                     position: relative;
 
                     &::before {
-                        content: url(../../componets/img/Sign_in.svg);
+                        content: url(../../componets/img/Header/Sign_in.svg);
                         position: absolute;
                         bottom: 50%;
                         right: 50%;

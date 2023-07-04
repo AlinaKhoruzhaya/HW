@@ -9,7 +9,9 @@ function Movies() {
 
     return (
         < SingleMovie />
-    )
-}
+
+
+    );
+};
 
 export default Movies;

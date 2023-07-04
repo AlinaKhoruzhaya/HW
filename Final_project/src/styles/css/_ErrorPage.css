@@ -1,0 +1,121 @@
+.wrapper_error_page {
+  width: 100%;
+  height: 100vh;
+}
+.wrapper_error_page .bg_error_page {
+  background: url(../../componets/img/Error_page/Error_page_bg.jpg) center center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page {
+  max-width: 440px;
+  height: 331px;
+  background: #28282d;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translateX(50%) translateY(50%);
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 120px;
+  position: relative;
+  background-image: -webkit-linear-gradient(0deg, #ff55a5 0%, #ff5860 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ff5860;
+  line-height: 100%;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-shadow: 0 12px 64px rgba(255, 88, 96, 0.35);
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page p {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #c7c7c7;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a {
+  text-decoration: none;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 160px;
+  border-radius: 8px;
+  background-image: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+  box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.3);
+  position: relative;
+  margin-top: 20px;
+  text-decoration: none;
+  border: 1px solid #ff55a5;
+  transition: 0.5s ease;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a button:hover {
+  transition: opacity 0.9s ease;
+  box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.6);
+  background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a button::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  border-radius: inherit;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a button :hover:before {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+.wrapper_error_page .bg_error_page .bg_content_error_page a span {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=_ErrorPage.css.map */

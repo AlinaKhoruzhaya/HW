@@ -5,6 +5,8 @@ import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Typography } from "@mui/material";
+import Play_button from '../img/Play_button.svg'
+
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
@@ -40,7 +42,6 @@ function MoviesList() {
             }
         })
             .then(response => {
-                // setGenreIds()
                 setMovies(response.data.results);
 
                 let totalPages = response.data.total_pages;
@@ -82,19 +83,28 @@ function MoviesList() {
                     }
                 }
             }
-            // genre = genre.toString();
-            genre = genre.join(', ');
-            return (<div key={index} className="movie">
 
-                <img src={imgBaseURL + movie.poster_path} />
-                <div className="card_content">
-                    <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
-                    {/* <h2>{movie.title}</h2> */}
-                    <p className="genre">{genre}</p>
-                    <p className="rating">{movie.vote_average}</p>
-                    {/* <Link to={"/movie/" + movie.id}>More</Link> */}
-                </div>
-            </div>)
+            genre = genre.join(', ');
+            return (
+                <div key={index} className="movie">
+                    <div className="wrapper_img">
+                        <Link to={"/movie/" + movie.id}>
+                            <img className="poster_movies_list" src={imgBaseURL + movie.poster_path} />
+                            <div className="bg"></div>
+                        </Link>
+
+                        <Link to={"/movie/" + movie.id}>  <img className="play_button" src={Play_button} alt='play' />
+                        </Link>
+
+                    </div>
+
+                    <div className="card_content">
+                        <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+                        <p className="genre">{genre}</p>
+                        <p className="rating">{movie.vote_average}</p>
+                    </div>
+                </div >
+            )
         });
 
         const titleMovies = {
@@ -112,7 +122,6 @@ function MoviesList() {
                     <div className="movies">{items}</div>
                     <div className="pagination">
                         <Stack spacing={0}>
-                            {/* <Typography> Page: {page}</Typography> */}
                             <Pagination count={total_pages} page={page} color='standard' onChange={handleChange} />
                         </Stack>
                     </div>

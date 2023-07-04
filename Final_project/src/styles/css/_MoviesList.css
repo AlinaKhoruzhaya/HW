@@ -9,8 +9,6 @@
   font-size: 36px;
   color: #fff;
   text-transform: uppercase;
-  color: #fff;
-  text-transform: uppercase;
   line-height: 1.5;
   text-align: left;
   font-family: "Ubuntu", sans-serif;
@@ -21,21 +19,52 @@
   font-size: 36px;
   color: #fff;
   text-transform: uppercase;
-  color: #fff;
-  text-transform: uppercase;
   line-height: 1.5;
   text-align: left;
 }
 .bg .movies {
   display: grid;
-  grid-template-columns: repeat(4, 247px);
-  gap: 40px;
+  grid-template-columns: repeat(5, 225px);
+  gap: 30px;
 }
-.bg .movies .movie img {
-  width: 247px;
-  height: 367px;
+.bg .movies .movie .wrapper_img {
+  position: relative;
 }
-.bg .movies .movie .card_content {
+.bg .movies .movie .wrapper_img:hover img.play_button {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-50%) scale(1.2);
+}
+.bg .movies .movie .wrapper_img img.poster_movies_list {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.bg .movies .movie .wrapper_img .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 10px;
+}
+.bg .movies .movie .wrapper_img .bg:hover {
+  content: "";
+  opacity: 0.7;
+  position: absolute;
+  background: linear-gradient(171deg, rgb(255, 85, 165) 0%, rgb(255, 88, 96) 100%);
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+.bg .movies .movie .wrapper_img .play_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 0;
+  transition: 0.8s ease;
+}
+.bg .card_content {
   max-width: 247px;
   max-height: 85px;
   box-sizing: border-box;
@@ -47,10 +76,10 @@
   margin-top: 10px;
   width: 100%;
 }
-.bg .movies .movie .card_content a {
+.bg .card_content a {
   text-decoration: none;
 }
-.bg .movies .movie .card_content a h2 {
+.bg .card_content a h2 {
   color: #fff;
   font-size: 20px;
   font-weight: 400;
@@ -62,7 +91,11 @@
   text-overflow: ellipsis;
   max-width: 210px;
 }
-.bg .movies .movie .card_content .genre {
+.bg .card_content a h2:hover {
+  color: #ff55a5;
+  transition: 0.5s ease;
+}
+.bg .card_content .genre {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   font-weight: normal;
@@ -80,10 +113,10 @@
   text-overflow: ellipsis;
   max-width: 210px;
 }
-.bg .movies .movie .card_content .genre:hover {
+.bg .card_content .genre:hover {
   opacity: 1;
 }
-.bg .movies .movie .card_content .rating {
+.bg .card_content .rating {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -98,7 +131,7 @@
   margin-top: 5px;
   padding-left: 20px;
 }
-.bg .movies .movie .card_content .rating::before {
+.bg .card_content .rating::before {
   content: "";
   position: absolute;
   left: 0;
@@ -108,22 +141,23 @@
   background: url("../../componets/img/Star.svg") no-repeat center;
   background-size: 100% auto;
 }
-.bg .pagination {
+
+.pagination {
   padding: 60px 0;
   display: flex;
   justify-content: center;
 }
-.bg .pagination ul li button {
+.pagination ul li button {
   color: #fff;
   font-family: "Ubuntu", sans-serif;
 }
-.bg .pagination ul li button:hover {
+.pagination ul li button:hover {
   background-color: #ff55a5;
 }
-.bg .pagination ul li button:active {
+.pagination ul li button:active {
   background-color: #ff55a5;
 }
-.bg .pagination ul li div {
+.pagination ul li div {
   color: #fff;
 }
 

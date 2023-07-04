@@ -1,11 +1,12 @@
 import MainMenu from "../nav/MainMenu.js";
 import Search from "./Search.js";
-import Logo from "../img/Logo.svg";
+import Logo from "../img/Header/Logo.svg";
 import { HeaderSvgFavourites } from "../svg/HeadeSvgFavourites.tsx";
-import "../img/Heart.svg";
-import "../img/User.svg";
-import Sidebar from '../pages/Sidebar.js';
+import "../img/Header/Heart.svg";
+import "../img/Header/User.svg";
+import Sidebar from './Sidebar.js';
 import { slide as Menu } from 'react-burger-menu';
+import { Link } from "react-router-dom";
 
 const links = [
     {
@@ -30,15 +31,14 @@ const nameButton = {
     name: 'sigh in'
 }
 
-
 function header() {
     return (
         <header className="header">
             <div className="header_container container">
                 <div className="logo">
-                    <a >
+                    <Link to={""}>
                         <img src={Logo} alt="logo" />
-                    </a>
+                    </Link>
                 </div>
                 <MainMenu links={links} />
                 <div>
@@ -48,9 +48,9 @@ function header() {
                 <a className="favourites">
                     <HeaderSvgFavourites id="heart" />
                 </a>
-                <a className="account">
+                <Link to={"/signin"} className="account">
                     <button><span>{nameButton.name}</span></button>
-                </a>
+                </Link>
 
                 <div className="burger-menu" id="outer-container">
                     <Menu right />

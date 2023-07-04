@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Error from "../layout/Error";
 
 function Notfound() {
     useEffect(() => {
@@ -6,7 +7,7 @@ function Notfound() {
     }, []);
 
     return (
-        <div> 404 Page</div>
+        <Error />
     )
 }
 

@@ -8,6 +8,7 @@ import NotFoundPage from "./componets/pages/NotFoundPage.js";
 import Layout from './componets/layout/Layout';
 import MoviePage from './componets/pages/MoviePage';
 import SearchPage from './componets/pages/SearchPage';
+import SignInPage from '../src/componets/pages/SignInPage';
 import "../src/styles/App.css"
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/search/:query" element={<SearchPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/signin" element={<SignInPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes >

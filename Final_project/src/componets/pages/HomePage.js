@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// import MainSlider from "../layout/MainSlider.js";
 import MainSliderHome from "../layout/MainSliderHome.js";
 import React from "react";
 
@@ -10,8 +9,8 @@ function Home() {
     }, []);
 
     return (
-        <MainSliderHome />)
-
+        <MainSliderHome />
+    )
 }
 
 export default Home;

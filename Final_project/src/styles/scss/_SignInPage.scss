@@ -1,0 +1,13 @@
+button#toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* Медиа-запрос не показан здесь. */
+    font-size: var(--mobile-font-size);
+    font-weight: 300;
+    padding: 0;
+    /* Отображение в верхней правой части контейнера */
+    position: absolute;
+    top: 0;
+    right: 0;
+}

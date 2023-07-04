@@ -1,6 +1,6 @@
 .bg_single_movie {
     position: relative;
-    background: #2a2a30;
+    background: #1d1d20;
     min-height: 100vh;
 
     .img_bg_single_movie {
@@ -31,48 +31,237 @@
             margin-bottom: 40px;
         }
 
-        .movie {
+        .movie_content {
             display: flex;
             gap: 20px;
-            width: calc(100% - 216px);
-            height: 278px;
 
-            .poster_single_movie {
-                max-width: 196px;
-                //max-height: 278px;
-                border-radius: 7px;
-            }
+            .movie_content_left {
+                margin-top: 30px;
 
-            .info_movie {
-                .rating {
-                    font-family: 'Ubuntu', sans-serif;
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #fff;
-                    line-height: 1.5;
-                    text-align: left;
-                    position: relative;
-                    display: inline-flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    //margin-top: 5px;
-                    padding-left: 20px;
+                .movie_content_img_info {
+                    display: flex;
+                    gap: 20px;
+                    width: calc(100% - 216px);
+                    height: 278px;
+                    max-width: 638px;
 
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        bottom: 0;
-                        width: 16px;
-                        background: url("../../componets/img/Star.svg") no-repeat center;
-                        background-size: 100% auto;
-
+                    .poster_single_movie {
+                        width: 196px;
+                        border-radius: 8px;
                     }
+
+                    .info_movie {
+                        .rating_movie {
+                            font-family: 'Ubuntu', sans-serif;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #fff;
+                            line-height: 1.5;
+                            text-align: left;
+                            position: relative;
+                            display: inline-flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            padding-left: 20px;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                width: 16px;
+                                background: url("../../componets/img/Star.svg") no-repeat center;
+                                background-size: 100% auto;
+                            }
+                        }
+
+                        .genre_movie {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #c7c7c7;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: normal;
+                            margin-bottom: 5px;
+
+                            .pink {
+                                color: #ff55a5;
+                                position: absolute;
+                                margin-left: 10px;
+                                opacity: .8;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .runtime_movie {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #c7c7c7;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: normal;
+                            margin-bottom: 5px;
+
+                            .white {
+                                margin-left: 10px;
+                            }
+                        }
+
+                        .country_movie {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #c7c7c7;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: normal;
+                            margin-bottom: 5px;
+
+                            .pink {
+                                color: #ff55a5;
+                                position: absolute;
+                                margin-left: 10px;
+                                opacity: .8;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .release_date_movie {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #c7c7c7;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: normal;
+                            margin-bottom: 100px;
+
+                            .white {
+
+                                margin-left: 10px;
+                            }
+                        }
+
+                        .tagline_movie {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #c7c7c7;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: normal;
+
+                            .pink {
+                                color: #ff55a5;
+                                position: absolute;
+                                margin-left: 10px;
+                                opacity: .8;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .overview_movie {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #c7c7c7;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: normal;
+                    margin-top: 30px;
+                    max-width: 638px;
+                    max-height: 216px;
                 }
             }
         }
 
+        .movie_video {
+            z-index: 5;
+
+            .rh5v-DefaultPlayer_component {
+                background: unset;
+
+                .rh5v-DefaultPlayer_video {
+                    width: 638px;
+                    height: 416px;
+                }
+            }
+
+            .rh5v-DefaultPlayer_controls {
+                .rh5v-PlayPause_component {
+                    &:hover {
+                        background-color: #ff55a5;
+                    }
+
+                    .rh5v-PlayPause_button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .rh5v-PlayPause_icon {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
+                .rh5v-Seek_fill,
+                .rh5v-Volume_fill {
+                    background-color: #ff55a5;
+                }
+
+                .rh5v-Volume_component {
+                    &:hover {
+                        background-color: #ff55a5;
+                    }
+
+                    .rh5v-Volume_icon {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .rh5v-Fullscreen_component {
+                    &:hover {
+                        background-color: #ff55a5;
+                    }
+
+                    .rh5v-Fullscreen_icon {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .rh5v-Overlay_inner {
+                background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: .85;
+                transition: 0.4s ease;
+
+                &:hover {
+                    opacity: 1;
+                    box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+                }
+
+                &::before {
+                    content: url(../../componets/img/Single_movie/SingleMovie_Play.svg);
+                    display: block;
+                    width: 26px;
+                    height: 26px;
+                }
+
+                .rh5v-Overlay_icon {
+                    display: none;
+                }
+            }
+        }
     }
 }

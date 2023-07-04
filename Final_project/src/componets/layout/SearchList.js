@@ -5,8 +5,7 @@ import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import { useParams } from "react-router-dom";
 import Stack from '@mui/material/Stack';
-import { Typography } from "@mui/material";
-
+import Play_button from '../img/Play_button.svg'
 
 const baseSearchURL = 'https://api.themoviedb.org/3/search/movie';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
@@ -67,33 +66,38 @@ function SearchList() {
 
 
         const items = movies.map((movie, index) =>
-            <div key={index} className="movie">
-                <img src={imgBaseURL + movie.poster_path} />
-                <h2>{movie.title}</h2>
-                <p>{movie.vote_average}</p>
-                <Link to={"/movie/" + movie.id}>More</Link>
-            </div>
+            <div key={index} className="movie_search_list">
+                <div className="wrapper_img_search_list">
+                    <Link to={"/movie/" + movie.id}> <img className="poster_search_list" src={imgBaseURL + movie.poster_path} /></Link>
+                    <div className="bg_search_list"></div>
+                    <Link to={"/movie/" + movie.id}>  <img className="play_button" src={Play_button} alt='play' /></Link>
+                </div>
+                <div className="card_content_search_list">
+                    <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+                    <p className="rating">{movie.vote_average.toFixed(1)}</p>
+                </div>
+            </div >
         );
+
+        const titleSearchList = {
+            part_first: 'search ',
+            part_second: 'results',
+        }
+
         return (
-
-
-            <div>
-
-                <div className="movies">{items}</div>
-                {/* <form onSubmit={handleSubmit}>
-                    <label>
-                        <input
-                            type='text'
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                        />
-                    </label>
-                    <input type="submit" value='Search' />
-                </form> */}
-                <Stack spacing={10}>
-                    <Typography> Page: {page}</Typography>
-                    <Pagination count={total_pages} page={page} color="secondary" onChange={handleChange} />
-                </Stack>
+            <div className="bg_search_list">
+                <div className="container">
+                    <div className="title_movies_search_list">
+                        <span className='title_movies_first_part'> {titleSearchList.part_first}</span>
+                        <span className='title_movies_second_part'> {titleSearchList.part_second}</span>
+                    </div>
+                    <div className="movies_search_list">{items}</div>
+                    <div className="pagination">
+                        <Stack spacing={10}>
+                            <Pagination count={total_pages} page={page} color="standard" onChange={handleChange} />
+                        </Stack>
+                    </div>
+                </div>
             </div>
         )
     }

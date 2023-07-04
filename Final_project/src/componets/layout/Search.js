@@ -41,7 +41,6 @@ function Search() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        // console.log(search)
         navigate('/search/' + search);
     }
 
@@ -58,7 +57,6 @@ function Search() {
 
         return (
             <div className="container">
-
                 <form onSubmit={handleSubmit} onChange={handleSearch}>
                     <label>
                         <input
