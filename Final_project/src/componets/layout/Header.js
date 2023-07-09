@@ -1,6 +1,6 @@
 import MainMenu from "../nav/MainMenu.js";
 import Search from "./Search.js";
-import Logo from "../img/Header/Logo.svg";
+import Logo from "../img/Logo.svg";
 import { HeaderSvgFavourites } from "../svg/HeadeSvgFavourites.tsx";
 import "../img/Header/Heart.svg";
 import "../img/Header/User.svg";

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import AboutUsContent from '../layout/AboutUsContent';
 
 function About() {
     useEffect(() => {
@@ -6,7 +7,7 @@ function About() {
     }, []);
 
     return (
-        <div> About Page</div>
+        <AboutUsContent />
     )
 }
 

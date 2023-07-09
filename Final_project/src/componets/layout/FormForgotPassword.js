@@ -5,7 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function FormSignIn() {
+function FormForgotPassword() {
     const {
         register,
         handleSubmit,
@@ -17,14 +17,15 @@ function FormSignIn() {
     }
 
     return (
-        <div className="wrapper_sign-in">
-            <div className="wrapper_bg_sign-in">
-                <div className="bg_form">
+        <div className="wrapper_password">
+            <div className="wrapper_bg_password">
+                <div className="bg_password_form">
                     <Link to={""}>
                         <img src={Logo} alt="logo" />
                     </Link>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="form-item-sign-in">
+
+                        <div className="form-item-password">
                             <input
                                 className={errors.email ? 'error' : ''}
                                 type="email"
@@ -39,33 +40,17 @@ function FormSignIn() {
                             />
                             <p className={'error-message'}>{errors.email && errors.email.message}</p>
                         </div>
-                        <div className="form-item-sign-in">
-                            <input
-                                className={errors.password ? 'error' : ''}
-                                type="password"
-                                // autocomplete="current-password"
-                                autoComplete="new-password"
-                                placeholder="Password"
-                                {...register("password", {
-                                    required: "Required",
-                                    pattern: {
-                                        value: /^[a-zA-z0-9" "]+$/g,
-                                        message: "Incorrect password"
-                                    }
-                                })}
-                            />
-                            <p className={'error-message'}>{errors.password && errors.password.message}</p>
-                        </div>
+
                         <Checkbox {...label} defaultChecked />
-                        <label>Remember me</label>
-                        <button className="form-item-sign-in" type="submit"><span>sign in</span></button>
+                        <label> I agree to the  <Link to={"/privacy"}> Privacy policy</Link></label>
+                        <button className="form-item-password" type="submit"><span>recover</span></button>
                     </form >
-                    <div className="other_links">Don't have an account?<Link to={"/signup"}> Sign up!</Link></div>
-                    <div className="other_links"><Link to={"/forgot"}> Forgot password?</Link></div>
+                    <div className="info">
+                        We will send a password to your Email</div>
                 </div>
             </div>
         </div>
     );
 }
 
-export default FormSignIn;
+export default FormForgotPassword;

@@ -10,6 +10,10 @@
 @import url(css/_ErrorPage.css);
 @import url(css/_ContactsPage.css);
 @import url(css/_SignInPage.css);
+@import url(css/_SignUpPage.css);
+@import url(css/_PrivacyPolicyPage.css);
+@import url(css/_PasswordPetrievalPage.css);
+@import url(css/_AboutUsPage.css);
 
 * {
     box-sizing: border-box;
@@ -24,8 +28,9 @@
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 
-    --bs-gutter-x: 1.5rem;
+    /* --bs-gutter-x: 1.5rem; */
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);

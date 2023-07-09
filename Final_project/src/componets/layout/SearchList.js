@@ -69,7 +69,7 @@ function SearchList() {
             <div key={index} className="movie_search_list">
                 <div className="wrapper_img_search_list">
                     <Link to={"/movie/" + movie.id}> <img className="poster_search_list" src={imgBaseURL + movie.poster_path} /></Link>
-                    <div className="bg_search_list"></div>
+                    <Link to={"/movie/" + movie.id}> <div className="bg_search_list"></div></Link>
                     <Link to={"/movie/" + movie.id}>  <img className="play_button" src={Play_button} alt='play' /></Link>
                 </div>
                 <div className="card_content_search_list">

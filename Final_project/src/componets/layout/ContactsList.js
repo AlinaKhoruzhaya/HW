@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 import NavContactsSocialMedia from '../nav/NavContactsSocialMedia';
 import ContactsForm from "./ContactsForm.js"
+
 const ContactsList = () => {
 
     const contactsPageTitle = {

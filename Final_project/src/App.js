@@ -2,13 +2,16 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from "./componets/pages/HomePage";
 import MoviesPage from "./componets/pages/MoviesPage.js";
-import AboutPage from "./componets/pages/AboutPage.js";
+import AboutPage from "./componets/pages/AboutPage";
 import ContactsPage from "./componets/pages/ContactsPage.js";
 import NotFoundPage from "./componets/pages/NotFoundPage.js";
 import Layout from './componets/layout/Layout';
 import MoviePage from './componets/pages/MoviePage';
 import SearchPage from './componets/pages/SearchPage';
 import SignInPage from '../src/componets/pages/SignInPage';
+import SignUpPage from './componets/pages/SignUpPage';
+import PrivacyPolicyPage from './componets/pages/PrivacyPolicyPage';
+import PasswordRetrievalPage from './componets/pages/PasswordPetrievalPage';
 import "../src/styles/App.css"
 
 
@@ -23,6 +26,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/forgot" element={<PasswordRetrievalPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes >

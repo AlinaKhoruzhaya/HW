@@ -1,0 +1,110 @@
+.wrapper_policy {
+  width: 100%;
+  height: 100vh;
+}
+.wrapper_policy .policy_top {
+  background: url(../../componets/img/Pages_bg.jpg) center center/cover no-repeat;
+  width: 100%;
+  position: relative;
+  padding: 70px 0;
+}
+.wrapper_policy .policy_top::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+}
+.wrapper_policy .policy_top .policy_top_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.wrapper_policy .policy_top .policy_top_content h1 {
+  font-size: 42px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+}
+.wrapper_policy .policy_top .policy_top_content .navigation_policy {
+  font-size: 14px;
+  line-height: 26px;
+  color: #c7c7c7;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+}
+.wrapper_policy .policy_top .policy_top_content .navigation_policy a {
+  text-decoration: none;
+  color: #c7c7c7;
+}
+.wrapper_policy .policy_top .policy_top_content .navigation_policy a:hover {
+  transition: 0.5s ease;
+  color: #ff55a5;
+}
+.wrapper_policy .policy_top .policy_top_content .navigation_policy a .link_home {
+  position: relative;
+  margin-right: 40px;
+}
+.wrapper_policy .policy_top .policy_top_content .navigation_policy a .link_home::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 40px;
+  bottom: 0;
+  top: 2px;
+  background: url(../../componets/img/Contacts/Arrow-right.svg) no-repeat center;
+  background-size: auto;
+  background-size: 16px auto;
+}
+.wrapper_policy .policy_bottom_bg {
+  width: 100%;
+  background-color: #2b2b31;
+  padding: 70px 0;
+  position: relative;
+}
+.wrapper_policy .policy_bottom_bg::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+}
+.wrapper_policy .policy_bottom_bg .policy_bottom {
+  color: #c7c7c7;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrapper_policy .policy_bottom_bg .policy_bottom .second_level {
+  padding-left: 15PX;
+}
+.wrapper_policy .policy_bottom_bg .policy_bottom .third_level {
+  padding-left: 30PX;
+}
+.wrapper_policy .policy_bottom_bg .policy_bottom a {
+  color: #ff55a5;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.wrapper_policy .policy_bottom_bg .policy_bottom a:hover {
+  color: #ff5860;
+}
+
+/*# sourceMappingURL=_PrivacyPolicyPage.css.map */
