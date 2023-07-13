@@ -141,23 +141,40 @@
   background: url("../../componets/img/Star.svg") no-repeat center;
   background-size: 100% auto;
 }
-
-.pagination {
+.bg .card_content div .like {
+  background-color: none;
+  background: url("../../componets/img/like.svg") no-repeat center;
+  border: none;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+}
+.bg .card_content div .dislike {
+  background-color: none;
+  background: url("../../componets/img/dislike .svg") no-repeat center;
+  border: none;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+}
+.bg .pagination {
   padding: 60px 0;
   display: flex;
   justify-content: center;
 }
-.pagination ul li button {
+.bg .pagination ul li button {
   color: #fff;
   font-family: "Ubuntu", sans-serif;
 }
-.pagination ul li button:hover {
+.bg .pagination ul li button:hover {
   background-color: #ff55a5;
 }
-.pagination ul li button:active {
+.bg .pagination ul li button:active {
   background-color: #ff55a5;
 }
-.pagination ul li div {
+.bg .pagination ul li div {
   color: #fff;
 }
 

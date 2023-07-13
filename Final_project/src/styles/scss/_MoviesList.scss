@@ -159,30 +159,52 @@
                 background-size: 100% auto;
             }
         }
-    }
-}
-
-.pagination {
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-
-    ul li {
-        button {
-            color: #fff;
-            font-family: 'Ubuntu', sans-serif;
-
-            &:hover {
-                background-color: #ff55a5;
-            }
-
-            &:active {
-                background-color: #ff55a5;
-            }
-        }
 
         div {
-            color: #fff;
+            .like {
+                background-color: none;
+                background: url("../../componets/img/like.svg") no-repeat center;
+                border: none;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 0;
+            }
+
+            .dislike {
+                background-color: none;
+                background: url("../../componets/img/dislike\ .svg") no-repeat center;
+                border: none;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    .pagination {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+
+        ul li {
+            button {
+                color: #fff;
+                font-family: 'Ubuntu', sans-serif;
+
+                &:hover {
+                    background-color: #ff55a5;
+                }
+
+                &:active {
+                    background-color: #ff55a5;
+                }
+            }
+
+            div {
+                color: #fff;
+            }
         }
     }
 }

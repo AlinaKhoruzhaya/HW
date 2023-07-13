@@ -1,10 +1,14 @@
-.wrapper_home {
+.home {
+  width: 100vw;
+  height: 100vh;
+}
+.home .wrapper_home {
   margin: 0;
   padding: 0;
   position: relative;
   height: 100%;
 }
-.wrapper_home .home_title {
+.home .wrapper_home .home_title {
   font-size: 40px;
   line-height: 52px;
   color: #fff;
@@ -15,25 +19,70 @@
   top: 80px;
   z-index: 3;
 }
-.wrapper_home .home_title span {
+.home .wrapper_home .home_title span {
   font-weight: 500;
 }
-.wrapper_home .swiper {
+.home .wrapper_home .button_home {
+  z-index: 4;
+  position: absolute;
+  right: 0;
+  top: 650px;
+}
+.home .wrapper_home .button_home a {
+  text-decoration: none;
+}
+.home .wrapper_home .button_home a button {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+  box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.3);
+  border-radius: 8px;
+  border: 1px solid #ff55a5;
+  position: relative;
+  transition: 0.5s ease;
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+.home .wrapper_home .button_home a button:hover {
+  transition: opacity 0.9s ease;
+  box-shadow: 0 0 16px 0 rgba(255, 88, 96, 0.6);
+  background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+}
+.home .wrapper_home .button_home a button :hover:before {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+.home .wrapper_home .swiper {
   width: 100%;
 }
-.wrapper_home .swiper-slide {
+.home .wrapper_home .swiper-slide {
   text-align: center;
 }
-.wrapper_home .mySwiper2 {
+.home .wrapper_home .mySwiper2 {
   position: absolute;
   z-index: 1;
   height: 100vh;
 }
-.wrapper_home .mySwiper2 a img.bg_img {
+.home .wrapper_home .mySwiper2 a img.bg_img {
   width: 100%;
   object-fit: cover;
 }
-.wrapper_home .mySwiper {
+.home .wrapper_home .mySwiper {
   position: absolute;
   top: 100px;
   display: flex;
@@ -44,25 +93,25 @@
   height: 550px;
   padding-top: 100px;
 }
-.wrapper_home .mySwiper .swiper-slide {
+.home .wrapper_home .mySwiper .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 10px;
 }
-.wrapper_home .mySwiper .swiper-slide a {
+.home .wrapper_home .mySwiper .swiper-slide a {
   text-decoration: none;
 }
-.wrapper_home .mySwiper .swiper-slide a:hover img.play_button {
+.home .wrapper_home .mySwiper .swiper-slide a:hover img.play_button {
   opacity: 1;
   transform: translateY(-50%) translateX(-50%) scale(1.2);
 }
-.wrapper_home .mySwiper .swiper-slide a img {
+.home .wrapper_home .mySwiper .swiper-slide a img {
   width: 234px;
   border-radius: 10px;
 }
-.wrapper_home .mySwiper .swiper-slide a .bg {
+.home .wrapper_home .mySwiper .swiper-slide a .bg {
   position: absolute;
   left: 0;
   top: 0;
@@ -71,7 +120,7 @@
   height: 351px;
   border-radius: 10px;
 }
-.wrapper_home .mySwiper .swiper-slide a .bg:hover {
+.home .wrapper_home .mySwiper .swiper-slide a .bg:hover {
   content: "";
   opacity: 0.7;
   position: absolute;
@@ -79,7 +128,7 @@
   transform: scale(1);
   transition: 0.5s ease;
 }
-.wrapper_home .mySwiper .swiper-slide a .play_button {
+.home .wrapper_home .mySwiper .swiper-slide a .play_button {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -89,7 +138,7 @@
   width: 64px;
   height: 64px;
 }
-.wrapper_home .mySwiper .swiper-slide h2 {
+.home .wrapper_home .mySwiper .swiper-slide h2 {
   margin-top: 10px;
   color: #fff;
   font-size: 20px;
@@ -102,11 +151,11 @@
   text-overflow: ellipsis;
   max-width: 210px;
 }
-.wrapper_home .mySwiper .swiper-slide h2:hover {
+.home .wrapper_home .mySwiper .swiper-slide h2:hover {
   color: #ff55a5;
   transition: 0.5s ease;
 }
-.wrapper_home .mySwiper .swiper-slide .rating {
+.home .wrapper_home .mySwiper .swiper-slide .rating {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -121,7 +170,7 @@
   margin-top: 5px;
   padding-left: 20px;
 }
-.wrapper_home .mySwiper .swiper-slide .rating::before {
+.home .wrapper_home .mySwiper .swiper-slide .rating::before {
   content: "";
   position: absolute;
   left: 0;
@@ -131,7 +180,7 @@
   background: url("../../componets/img/Star.svg") no-repeat center;
   background-size: 100% auto;
 }
-.wrapper_home .mySwiper .swiper-button-prev {
+.home .wrapper_home .mySwiper .swiper-button-prev {
   position: absolute;
   top: 0px;
   left: var(--swiper-navigation-sides-offset, 1180px);
@@ -139,7 +188,7 @@
   width: 50px;
   height: 70px;
 }
-.wrapper_home .mySwiper .swiper-button-prev::after {
+.home .wrapper_home .mySwiper .swiper-button-prev::after {
   content: url("../../componets/img/Home/Rounded-square.svg");
   position: absolute;
   z-index: 5;
@@ -149,11 +198,11 @@
   width: 45px;
   background-size: 100% auto;
 }
-.wrapper_home .mySwiper .swiper-button-prev:hover {
+.home .wrapper_home .mySwiper .swiper-button-prev:hover {
   opacity: 1;
   transition: 0.7s ease;
 }
-.wrapper_home .mySwiper .swiper-button-next {
+.home .wrapper_home .mySwiper .swiper-button-next {
   position: absolute;
   top: 0;
   right: 0;
@@ -161,7 +210,7 @@
   width: 50px;
   height: 70px;
 }
-.wrapper_home .mySwiper .swiper-button-next::after {
+.home .wrapper_home .mySwiper .swiper-button-next::after {
   content: url("../../componets/img/Home/Rounded-square.svg");
   position: absolute;
   z-index: 5;
@@ -172,11 +221,11 @@
   background-size: 100% auto;
   transform: rotate(-0.5turn);
 }
-.wrapper_home .mySwiper .swiper-button-next:hover {
+.home .wrapper_home .mySwiper .swiper-button-next:hover {
   opacity: 1;
   transition: 0.7s ease;
 }
-.wrapper_home .bg_filter {
+.home .wrapper_home .bg_filter {
   position: absolute;
   left: 0;
   top: 0;

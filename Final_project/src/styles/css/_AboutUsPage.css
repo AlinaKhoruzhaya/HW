@@ -1,6 +1,5 @@
 .wrapper_about {
   width: 100%;
-  height: 100vh;
 }
 .wrapper_about .about_top {
   background: url(../../componets/img/Pages_bg.jpg) center center/cover no-repeat;

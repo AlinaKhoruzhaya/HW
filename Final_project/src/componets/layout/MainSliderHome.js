@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import * as React from 'react';
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
-import Play_button from '../img/Play_button.svg'
+import Play_button from '../img/Play_button.svg';
+import { ArrowHome } from '../svg/ArrowHome.tsx'
 
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
@@ -77,40 +78,53 @@ function MainSliderHome() {
             part_second: 'of this season',
         }
 
-        return (
-            <div className='wrapper_home'>
+        const linkBottom = {
+            text_link: 'Watch all movies',
+        }
 
-                <div className='container'>
-                    <h1 className='home_title '>
-                        <span >{homeTitle.part_first}</span>{homeTitle.part_second}
-                    </h1>
+        return (
+            <div className='home'>
+                <div className='wrapper_home'>
+
+                    <div className='container'>
+                        <h1 className='home_title '>
+                            <span >{homeTitle.part_first}</span>{homeTitle.part_second}
+                        </h1>
+                        <div className='button_home'>
+                            <Link to={"/movies"}>
+                                <button>{linkBottom.text_link} <ArrowHome id='arrow' /></button>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <Swiper
+                        spaceBetween={20}
+                        slidesPerView={5}
+                        navigation={true}
+                        thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper container"
+                    >
+                        {items}
+
+                    </Swiper >
+
+                    <Swiper
+                        spaceBetween={10}
+                        onSwiper={setThumbsSwiper}
+                        freeMode={true}
+                        watchSlidesProgress={true}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper2 "
+                    >
+                        {itemsBg}
+
+                    </Swiper>
+
+                    <div className='bg_filter'></div>
 
                 </div>
-                <Swiper
-                    spaceBetween={20}
-                    slidesPerView={5}
-                    navigation={true}
-                    thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper container"
-                >
-                    {items}
-
-                </Swiper >
-
-                <Swiper
-                    spaceBetween={10}
-                    onSwiper={setThumbsSwiper}
-                    freeMode={true}
-                    watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper2 "
-                >
-                    {itemsBg}
-
-                </Swiper>
-                <div className='bg_filter'></div>
-            </div>
+            </div >
         );
     }
 }

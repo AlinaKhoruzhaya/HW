@@ -14,6 +14,7 @@
 @import url(css/_PrivacyPolicyPage.css);
 @import url(css/_PasswordPetrievalPage.css);
 @import url(css/_AboutUsPage.css);
+@import url(css/_Footer.css);
 
 * {
     box-sizing: border-box;

@@ -5,7 +5,8 @@ import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Typography } from "@mui/material";
-import Play_button from '../img/Play_button.svg'
+import Play_button from '../img/Play_button.svg';
+import IconCheckboxes from '../layout/CheckboxLike';
 
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
@@ -19,6 +20,17 @@ function MoviesList() {
     const [page, setPage] = React.useState(1);
     const [total_pages, setTotalPages] = React.useState(100);
     const [genre_ids, setGenreIds] = useState([]);
+    const [liked, setLiked] = useState(() => {
+        let items = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            if (!key.indexOf('movie-')) {
+                items.push(Number(localStorage.getItem(key)));
+            }
+        }
+        return items;
+    });
+
 
     async function fetchData(currentPage) {
         axios.get(genresURL, {
@@ -65,6 +77,23 @@ function MoviesList() {
         fetchData(page)
     }, []);
 
+
+    const setWishList = (event) => {
+        event.preventDefault()
+        let id = Number(event.target.attributes.getNamedItem('data-id').value);
+        let isFavourited = liked.includes(id)
+        if (!isFavourited) {
+            let newItem = [...liked, id]
+            setLiked(newItem);
+            window.localStorage.setItem('movie-' + id, id);
+        } else {
+            let newItem = liked.filter((savedId) => savedId !== id)
+            setLiked(newItem);
+            window.localStorage.removeItem('movie-' + id, id);
+        }
+    }
+
+
     if (error) {
         return (<div className="error"> <h2>{error}</h2> </div>)
     } else if (movies) {
@@ -101,7 +130,14 @@ function MoviesList() {
                     <div className="card_content">
                         <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
                         <p className="genre">{genre}</p>
-                        <p className="rating">{movie.vote_average}</p>
+                        <div>
+                            <p className="rating">{movie.vote_average}</p>
+                            <button onClick={setWishList} data-id={movie.id} className={liked.includes(movie.id) ? 'dislike' : 'like'}>{liked.includes(movie.id) ? '' : ''} </button>
+                        </div>
+
+                        {/* <button onClick={setWishList} data-id={movie.id} className={liked.includes(movie.id) ? 'dislike' : 'like'}>{liked.includes(movie.id) ? 'dislike' : 'like'} </button> */}
+
+
                     </div>
                 </div >
             )

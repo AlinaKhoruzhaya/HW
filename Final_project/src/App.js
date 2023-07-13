@@ -12,7 +12,9 @@ import SignInPage from '../src/componets/pages/SignInPage';
 import SignUpPage from './componets/pages/SignUpPage';
 import PrivacyPolicyPage from './componets/pages/PrivacyPolicyPage';
 import PasswordRetrievalPage from './componets/pages/PasswordPetrievalPage';
-import "../src/styles/App.css"
+import WishListPage from './componets/pages/WishListPage';
+import "../src/styles/App.css";
+import 'animate.css';
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/forgot" element={<PasswordRetrievalPage />} />
+        <Route path="/wishlist" element={<WishListPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes >

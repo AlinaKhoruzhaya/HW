@@ -1,0 +1,156 @@
+.footer {
+    width: 100%;
+    padding: 70px 0 30px;
+    background-color: #28282d;
+    position: relative;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        display: block;
+        background: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+        box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+    }
+
+    .footer_container {
+        display: grid;
+        grid-template-columns: 400px 1fr 1fr 1fr;
+        align-items: end;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 70px;
+
+        div {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 30px;
+
+            img {
+                max-width: 120px;
+                top: 0;
+                position: absolute;
+                transition: transform 0.25s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .navFooterSocial {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: start;
+                    margin-top: 10px;
+                    gap: 20px;
+
+                    svg {
+                        transition: 0.5s ease;
+
+                        &:hover {
+                            fill: #ff55a5;
+                        }
+                    }
+
+                    svg#other {
+                        transition: 0.5s ease;
+
+                        &:hover {
+                            stroke: #ff55a5;
+                            fill: none;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .column {
+            span {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.2;
+                font-family: 'Ubuntu', sans-serif;
+            }
+
+            .nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                li {
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    transition: transform 0.25s;
+
+                    &:hover a {
+                        color: #ff55a5;
+                        transform: scale(1.1);
+                    }
+
+                    a {
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #c7c7c7;
+                        font-weight: 400;
+                        text-decoration: none;
+
+                        .active {
+                            border-bottom: 1px solid #ff55a5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+
+            li {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                transition: transform 0.25s;
+
+                &:hover a {
+                    color: #ff55a5;
+                    transform: scale(1.1);
+                }
+
+                a {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #c7c7c7;
+                    font-weight: 400;
+                    text-decoration: none;
+
+                    .active {
+                        border-bottom: 1px solid #ff55a5;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom_content {
+        padding-top: 30px;
+        color: #c7c7c7;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+    }
+}

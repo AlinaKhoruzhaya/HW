@@ -45,9 +45,9 @@ function header() {
                     <Search />
                 </div>
 
-                <a className="favourites">
+                <Link className="favourites" to={"/wishlist"} >
                     <HeaderSvgFavourites id="heart" />
-                </a>
+                </Link>
                 <Link to={"/signin"} className="account">
                     <button><span>{nameButton.name}</span></button>
                 </Link>
