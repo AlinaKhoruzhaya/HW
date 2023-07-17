@@ -1,6 +1,6 @@
 .wrapper_policy {
     width: 100%;
-    height: 100vh;
+
 
     .policy_top {
         background: url(../../componets/img/Pages_bg.jpg) center center / cover no-repeat;
@@ -33,6 +33,7 @@
                 color: #fff;
                 font-weight: 300;
                 font-family: 'Ubuntu', sans-serif;
+                padding-top: 80px;
             }
 
             .navigation_policy {

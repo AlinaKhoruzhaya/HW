@@ -1,0 +1,152 @@
+.bg_wish_list {
+    background-color: #2B2B31;
+
+    .title_wish_list {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        font-size: 36px;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1.5;
+        text-align: left;
+        padding-top: 180px;
+    }
+
+    .movies_wish_list {
+        display: grid;
+        grid-template-columns: repeat(3, 413px);
+        gap: 30px;
+        padding: 70px 0;
+
+        .movie_wish_list {
+            display: flex;
+            gap: 13px;
+
+            .wrapper_img {
+                position: relative;
+                width: 200px;
+
+                &:hover img.play_button {
+                    opacity: 1;
+                    transform: translateY(-50%) translateX(-50%) scale(1.2);
+                }
+
+                img.poster_wish_list {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+
+                .bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    border-radius: 10px;
+
+                    &:hover {
+                        content: "";
+                        opacity: 0.7;
+                        position: absolute;
+                        background: linear-gradient(171deg, rgba(255, 85, 165, 1) 0%, rgba(255, 88, 96, 1) 100%);
+                        transform: scale(1.0);
+                        transition: 0.5s ease;
+                    }
+                }
+
+                .play_button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    opacity: 0;
+                    transition: 0.8s ease;
+                }
+            }
+
+            .card_content {
+                width: 200px;
+                box-sizing: border-box;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+
+                    h2 {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-family: 'Ubuntu', sans-serif;
+                        line-height: 1.5;
+                        text-align: left;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 210px;
+
+                        &:hover {
+                            color: #ff55a5;
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+
+
+                .rating_wish_list {
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #fff;
+                    line-height: 1.5;
+                    text-align: left;
+                    position: relative;
+                    display: inline-flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 5px;
+                    padding-left: 20px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 16px;
+                        background: url("../../componets/img/Star.svg") no-repeat center;
+                        background-size: 100% auto;
+                    }
+                }
+
+                .overview_wish_list {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #c7c7c7;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: normal;
+                    margin-top: 30px;
+                    max-width: 638px;
+                    max-height: 216px;
+                    overflow-y: scroll;
+                    scroll-behavior: smooth;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+html,
+body {
+    scrollbar-color: #ff55a5 #28282d;
+    scrollbar-width: thin;
+}

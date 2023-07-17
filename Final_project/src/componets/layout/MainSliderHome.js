@@ -1,15 +1,20 @@
+import * as React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, FreeMode, Thumbs, Controller } from 'swiper';
+// import { Controller } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import 'swiper/css/effect-fade';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import * as React from 'react';
-import "swiper/css/free-mode";
-import "swiper/css/thumbs";
+import { Navigation, FreeMode, Thumbs, Controller, EffectFade } from 'swiper';
+
 import Play_button from '../img/Play_button.svg';
-import { ArrowHome } from '../svg/ArrowHome.tsx'
+import { ArrowHome } from '../svg/ArrowHome.tsx';
+
 
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
@@ -69,6 +74,7 @@ function MainSliderHome() {
             <SwiperSlide>
                 <Link to={"/movie/" + movie.id}>
                     <img className='bg_img' src={imgBgURL + movie.poster_path} />
+
                 </Link>
             </SwiperSlide>
         );
@@ -83,14 +89,14 @@ function MainSliderHome() {
         }
 
         return (
-            <div className='home'>
+            <div className='home-blok'> <div className='home'>
                 <div className='wrapper_home'>
 
-                    <div className='container'>
-                        <h1 className='home_title '>
-                            <span >{homeTitle.part_first}</span>{homeTitle.part_second}
+                    <div className='container container_home'>
+                        <h1 className='home_title container'>
+                            <span className='container'>{homeTitle.part_first}</span>{homeTitle.part_second}
                         </h1>
-                        <div className='button_home'>
+                        <div className='button_home container'>
                             <Link to={"/movies"}>
                                 <button>{linkBottom.text_link} <ArrowHome id='arrow' /></button>
                             </Link>
@@ -98,24 +104,57 @@ function MainSliderHome() {
                     </div>
 
                     <Swiper
-                        spaceBetween={20}
                         slidesPerView={5}
+                        spaceBetween={20}
+
                         navigation={true}
-                        thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
-                        modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper container"
+                        //thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+                        // thumbs={{ swiper: thumbsSwiper }}
+                        breakpoints={{
+                            '@0.00': {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            '@0.5': {
+                                slidesPerView: 2,
+                                spaceBetween: 5,
+                            },
+                            '@0.75': {
+                                slidesPerView: 3,
+                                spaceBetween: 5,
+                            },
+                            '@1.0': {
+                                slidesPerView: 4,
+                                spaceBetween: 20,
+                            },
+                            '@1.25': {
+                                slidesPerView: 5,
+                                spaceBetween: 20,
+                            },
+                        }}
+
+
+                        modules={[FreeMode, Navigation, Thumbs, Controller]}
+                        controller={{ control: controlledSwiper }}
+                        className="mySwiper container container_home"
                     >
                         {items}
 
                     </Swiper >
 
                     <Swiper
+
+
+                        // onSwiper={setThumbsSwiper}
                         spaceBetween={10}
-                        onSwiper={setThumbsSwiper}
+                        effect={'fade'}
                         freeMode={true}
                         watchSlidesProgress={true}
-                        modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper2 "
+                        modules={[FreeMode, Navigation, Thumbs, Controller, EffectFade]}
+                        onSwiper={setControlledSwiper}
+
+
+                        className="mySwiper2"
                     >
                         {itemsBg}
 
@@ -124,7 +163,9 @@ function MainSliderHome() {
                     <div className='bg_filter'></div>
 
                 </div>
-            </div >
+            </div ></div>
+
+
         );
     }
 }

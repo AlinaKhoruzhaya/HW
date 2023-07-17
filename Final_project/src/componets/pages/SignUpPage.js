@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import FormSignUp from "../layout/FormSignUp";
+import FormSignUp from "../layoutSecond/FormSignUp";
 
 function SignUp() {
     useEffect(() => {

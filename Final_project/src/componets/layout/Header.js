@@ -4,9 +4,9 @@ import Logo from "../img/Logo.svg";
 import { HeaderSvgFavourites } from "../svg/HeadeSvgFavourites.tsx";
 import "../img/Header/Heart.svg";
 import "../img/Header/User.svg";
-import Sidebar from './Sidebar.js';
-import { slide as Menu } from 'react-burger-menu';
 import { Link } from "react-router-dom";
+import MainMenuBurg from "../nav/MainMenuBurg.js";
+
 
 const links = [
     {
@@ -27,11 +27,13 @@ const links = [
     },
 ];
 
+
 const nameButton = {
     name: 'sigh in'
 }
 
 function header() {
+
     return (
         <header className="header">
             <div className="header_container container">
@@ -44,19 +46,18 @@ function header() {
                 <div>
                     <Search />
                 </div>
-
                 <Link className="favourites" to={"/wishlist"} >
                     <HeaderSvgFavourites id="heart" />
                 </Link>
                 <Link to={"/signin"} className="account">
                     <button><span>{nameButton.name}</span></button>
                 </Link>
-
-                <div className="burger-menu" id="outer-container">
-                    <Menu right />
-                    <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+                <div className="burger-menu" >
+                    <input type="checkbox" id="active" />
+                    <label for="active" class="menu-btn"><span></span></label>
+                    <label for="active" class="close"></label>
+                    <MainMenuBurg links={links} />
                 </div>
-
             </div>
         </header>
     )

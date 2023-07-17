@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Error from "../layout/Error";
+import Error from "../layoutSecond/Error";
 
 function Notfound() {
     useEffect(() => {

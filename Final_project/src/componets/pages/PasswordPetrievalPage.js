@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import FormForgotPassword from "../layout/FormForgotPassword";
+import FormForgotPassword from "../layoutSecond/FormForgotPassword"
 
 function PasswordRetrieval() {
     useEffect(() => {

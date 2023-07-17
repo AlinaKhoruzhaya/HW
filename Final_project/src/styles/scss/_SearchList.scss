@@ -2,7 +2,7 @@
     background-color: #2B2B31;
 
     .title_movies_search_list {
-        padding: 70px 0 50px;
+        padding: 170px 0 50px;
 
         .title_movies_first_part {
             font-weight: 500;
@@ -33,6 +33,7 @@
         .movie_search_list {
             .wrapper_img_search_list {
                 position: relative;
+                height: 340px;
 
                 &:hover img.play_button {
                     opacity: 1;

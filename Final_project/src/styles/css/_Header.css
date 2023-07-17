@@ -7,7 +7,7 @@
 }
 .header .header_container {
   display: grid;
-  grid-template-columns: 248px 1fr 232px 84px 130px;
+  grid-template-columns: 248px 1fr 50px 80px 130px;
   align-items: center;
   height: 80px;
 }
@@ -48,82 +48,18 @@
   font-weight: 400;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid #2B2B31;
+  padding-bottom: 2px;
 }
-.header .header_container .nav ul li a .active {
+.header .header_container .nav ul li .active {
   border-bottom: 1px solid #ff55a5;
 }
-.header .header_container form {
-  position: relative;
-}
-.header .header_container form label input {
-  background: transparent;
-  font-family: "Ubuntu", sans-serif;
-  box-sizing: border-box;
-  outline: none;
-  font-size: 16px;
-  padding-left: 20px;
-  width: 196px;
-  height: 46px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background-color: #28282d;
-  border-radius: 8px;
-  padding: 0 60px 0 20px;
-  font-weight: 400;
-  color: #fff;
-  transition: 0.5s ease;
-}
-.header .header_container form label svg {
-  position: absolute;
-  right: 50px;
-  bottom: 50%;
-  transform: translateY(50%);
-}
-.header .header_container form label svg path:hover {
+.header .header_container div:hover button svg path {
   fill: #ff55a5;
 }
-.header .header_container form label input#search_button {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 20px;
-  bottom: 50%;
-  transform: translateY(50%);
-  opacity: 0;
-}
-.header .header_container .search {
-  position: absolute;
-  background-color: #2B2B31;
-  z-index: 2;
-  max-width: 232px;
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease;
-  border-radius: 4px;
-  margin-top: 19px;
-}
-.header .header_container .search::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  display: block;
-  background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
-  box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
-}
-.header .header_container .movie a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: 300;
-}
-.header .header_container .movie a:hover {
-  color: #ff55a5;
+.header .header_container div button {
+  background: inherit;
+  border: none;
 }
 .header .favourites {
   display: flex;
@@ -195,9 +131,68 @@
   display: none;
 }
 
+.search {
+  position: absolute;
+  background-color: #2B2B31;
+  z-index: 2;
+  max-width: 400px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease;
+  border-radius: 4px;
+  top: 61px;
+}
+.search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  display: block;
+  background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+  box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+}
+
+label input {
+  background: transparent;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  padding-left: 20px;
+  width: 196px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #28282d;
+  border-radius: 8px;
+  padding: 0 60px 0 20px;
+  font-weight: 400;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.movie a {
+  text-decoration: none;
+}
+.movie a h2 {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 300;
+  padding: 5px 10px;
+}
+.movie a h2:hover {
+  color: #ff55a5;
+}
+
 @media (max-width: 1200px) {
   .header .header_container {
-    grid-template-columns: 3fr 1fr 0.5fr 1fr 0.5fr;
+    max-width: 936px;
+    grid-template-columns: 5fr 0.2fr 1fr 1fr 1fr;
   }
   .header .header_container .logo {
     width: 210px;
@@ -213,16 +208,19 @@
   }
   .header .header_container .burger-menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
+  button svg {
+    width: 22px;
+    height: 22px;
   }
 }
-@media (max-width: 990px) {
-  .container {
-    max-width: 720px;
-  }
+@media (max-width: 1000px) {
   .header .header_container {
-    display: flex;
-    justify-content: end;
-    gap: 30px;
+    max-width: 820px;
   }
   .header .header_container .logo {
     margin-right: 168px;
@@ -236,11 +234,21 @@
     right: 0;
   }
 }
-@media (max-width: 768px) {
-  .container {
-    max-width: 510px;
-  }
+@media (max-width: 900px) {
   .header .header_container {
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .header .header_container .logo {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header .header_container {
+    max-width: 540px;
     height: 70px;
   }
   .header .header_container .logo {
@@ -260,14 +268,22 @@
   .header .header_container .account button::before {
     content: url(../../componets/img/Header/Sign_in.svg);
     position: absolute;
-    bottom: 50%;
-    right: 50%;
+    bottom: 23px;
+    left: -4px;
     transform: translateX(50%) translateY(50%);
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: auto;
+    opacity: 1;
   }
   .header .header_container .account button span {
     display: none;
+  }
+  .header .header_container .wrapper {
+    top: 70px;
+  }
+  button svg {
+    width: 25px;
+    height: 25px;
   }
 }
 @media (max-width: 575px) {
@@ -283,27 +299,13 @@
     max-width: 100px;
     max-height: 30px;
   }
-  .header .header_container .account button {
-    height: 40px;
-    width: 40px;
-    position: relative;
-  }
-  .header .header_container .account button::before {
-    content: url(../../componets/img/Header/Sign_in.svg);
-    position: absolute;
-    bottom: 50%;
-    right: 50%;
-    transform: translateX(50%) translateY(50%);
-    width: 22px;
-    height: 22px;
-  }
-  .header .header_container .account button span {
-    display: none;
+  .header .header_container .wrapper {
+    width: 100%;
   }
 }
 @media (max-width: 445px) {
-  .header .container {
-    max-width: 329px;
+  .header .header_container {
+    gap: 5px;
   }
   .header .header_container .logo {
     min-width: 110px;
@@ -311,13 +313,6 @@
   .header .header_container .logo a img {
     max-width: 80px;
     max-height: 24px;
-  }
-}
-@media (max-width: 350px) {
-  .header .container {
-    max-width: 270px;
-    justify-content: center;
-    gap: 20px;
   }
 }
 

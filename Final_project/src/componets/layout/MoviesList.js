@@ -6,7 +6,6 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Typography } from "@mui/material";
 import Play_button from '../img/Play_button.svg';
-import IconCheckboxes from '../layout/CheckboxLike';
 
 
 const baseURL = 'https://api.themoviedb.org/3/discover/movie';
@@ -112,7 +111,6 @@ function MoviesList() {
                     }
                 }
             }
-
             genre = genre.join(', ');
             return (
                 <div key={index} className="movie">
@@ -124,9 +122,7 @@ function MoviesList() {
 
                         <Link to={"/movie/" + movie.id}>  <img className="play_button" src={Play_button} alt='play' />
                         </Link>
-
                     </div>
-
                     <div className="card_content">
                         <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
                         <p className="genre">{genre}</p>
@@ -134,10 +130,6 @@ function MoviesList() {
                             <p className="rating">{movie.vote_average}</p>
                             <button onClick={setWishList} data-id={movie.id} className={liked.includes(movie.id) ? 'dislike' : 'like'}>{liked.includes(movie.id) ? '' : ''} </button>
                         </div>
-
-                        {/* <button onClick={setWishList} data-id={movie.id} className={liked.includes(movie.id) ? 'dislike' : 'like'}>{liked.includes(movie.id) ? 'dislike' : 'like'} </button> */}
-
-
                     </div>
                 </div >
             )

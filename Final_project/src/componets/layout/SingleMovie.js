@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactVideoPlayer from "./ReactVideoPlayer";
-
+import { Link } from "react-router-dom";
 
 const baseURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = 'a39a95f374f0c76df89723a2f2422478';
 const imgBaseURL = "https://image.tmdb.org/t/p/w500"
-
+const imgBgURL = "https://image.tmdb.org/t/p/original/";
 
 const SingleMovie = () => {
     const params = useParams();
@@ -58,9 +58,10 @@ const SingleMovie = () => {
             tagline_name: 'Tagline: ',
         };
 
+
         return (
-            <div className="bg_single_movie">
-                <div className="img_bg_single_movie"></div>
+            <div className="single_movie">
+                <div className="img_bg_single_movie"> <img src={imgBgURL + movie.poster_path} /></div>
                 <div className="container_single_movie">
                     <h2 className='name_movie'> {movie.title}</h2>
                     <div className="movie_content">

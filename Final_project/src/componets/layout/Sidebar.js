@@ -4,8 +4,8 @@ import { slide as Menu } from 'react-burger-menu';
 export default props => {
     return (
         <Menu
-            right
-            width={'260px'}
+        // right
+        // width={'260px'}
         >
             <a className="menu-item" href="/">
                 Home

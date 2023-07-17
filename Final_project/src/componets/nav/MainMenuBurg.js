@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-
-function MainMenu(props) {
+function MainMenuBurg(props) {
 
     const listItems = props.links.map((item, index) =>
         <li key={item.link.toString()}>
@@ -10,14 +9,13 @@ function MainMenu(props) {
     );
 
     return (
-        <nav className="nav">
+        <div className="wrapper">
             <ul>{listItems}</ul>
-
-        </nav>
+        </div>
     );
 }
 
-MainMenu.defaultProps = {
+MainMenuBurg.defaultProps = {
     links: [
         {
             link: "Link",
@@ -30,4 +28,4 @@ MainMenu.defaultProps = {
     ]
 }
 
-export default MainMenu;
+export default MainMenuBurg;

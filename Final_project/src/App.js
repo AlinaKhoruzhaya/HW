@@ -1,5 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom';
+import LayoutSecond from './componets/layoutSecond/LayoutSecond.js';
 import HomePage from "./componets/pages/HomePage";
 import MoviesPage from "./componets/pages/MoviesPage.js";
 import AboutPage from "./componets/pages/AboutPage";
@@ -27,11 +28,17 @@ function App() {
         <Route path="/search/:query" element={<SearchPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        {/* <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} /> */}
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        {/* <Route path="/forgot" element={<PasswordRetrievalPage />} /> */}
+        <Route path="/wishlist" element={<WishListPage />} />
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
+      </Route>
+      <Route path="/" element={<LayoutSecond />} >
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/forgot" element={<PasswordRetrievalPage />} />
-        <Route path="/wishlist" element={<WishListPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes >

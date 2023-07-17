@@ -15,6 +15,7 @@
 @import url(css/_PasswordPetrievalPage.css);
 @import url(css/_AboutUsPage.css);
 @import url(css/_Footer.css);
+@import url(css/_WishListPage.css);
 
 * {
     box-sizing: border-box;
@@ -41,5 +42,5 @@
 }
 
 main {
-    padding-top: 80px;
+    /* padding-top: 80px; */
 }
