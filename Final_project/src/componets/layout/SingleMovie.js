@@ -31,7 +31,7 @@ const SingleMovie = () => {
     }
     useEffect(() => {
         fetchData()
-    }, []);
+    }, [movie]);
     if (error) {
         return (<div className="error"> <h2>{error}</h2> </div>)
     } else if (movie) {

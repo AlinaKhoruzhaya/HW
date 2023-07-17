@@ -67,6 +67,7 @@ function SearchPopUp() {
     const handleSubmit = (event) => {
         event.preventDefault()
         navigate('/search/' + search);
+        setSearch('');
     }
 
     if (error) {

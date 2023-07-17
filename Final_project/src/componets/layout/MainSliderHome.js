@@ -22,17 +22,29 @@ const apiKey = 'a39a95f374f0c76df89723a2f2422478';
 const imgBaseURL = "https://image.tmdb.org/t/p/w500";
 const imgBigURL = "https://image.tmdb.org/t/p/w1280";
 const imgBgURL = "https://image.tmdb.org/t/p/original/";
-
+const genresURL = 'https://api.themoviedb.org/3/genre/movie/list';
 
 function MainSliderHome() {
     const [movies, setMovies] = useState(null);
     const [error, setError] = useState(null);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [genre_ids, setGenreIds] = useState([]);
     const [controlledSwiper, setControlledSwiper] = useState(null);
 
 
     async function fetchData() {
+      axios.get(genresURL, {
+        params: {
+          api_key: apiKey,
+        }
+      })
+          .then(response => {
 
+            setGenreIds(response.data.genres);
+          })
+          .catch(error => {
+            setError(error.message);
+          })
 
         axios.get(baseURL, {
             params: {
@@ -57,18 +69,34 @@ function MainSliderHome() {
     } else if (movies) {
 
 
-        const items = movies.map((movie, index) =>
-            <SwiperSlide>
-                <Link to={"/movie/" + movie.id}>
-                    <img className='slide_img ' src={imgBaseURL + movie.poster_path} />
-                    <div className="bg"></div>
-                    <img className="play_button" src={Play_button} alt='play' />
+        const items = movies.map((movie, index) => {
+          let genre = [];
+          let genreIds = movie.genre_ids;
 
-                </Link>
-                <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
-                <p className="rating">{movie.vote_average.toFixed(1)}</p>
-            </SwiperSlide>
-        );
+          for (let i = 0; i < genreIds.length; i++) {
+            let id = genreIds[i];
+            for (let q = 0; q < genre_ids.length; q++) {
+              let api_id = genre_ids[q].id
+              if (id === api_id) {
+                genre.push(genre_ids[q].name);
+              }
+            }
+          }
+          genre = genre.join(', ');
+          return (
+              <SwiperSlide>
+            <Link to={"/movie/" + movie.id}>
+              <img className='slide_img ' src={imgBaseURL + movie.poster_path}/>
+              <div className="bg"></div>
+              {genre}
+              <img className="play_button" src={Play_button} alt='play'/>
+
+            </Link>
+            <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+            <p className="rating">{movie.vote_average.toFixed(1)}</p>
+          </SwiperSlide>
+          )
+        });
 
         const itemsBg = movies.map((movie, index) =>
             <SwiperSlide>
