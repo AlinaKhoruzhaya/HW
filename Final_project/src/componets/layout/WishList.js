@@ -65,7 +65,9 @@ const WishList = () => {
                     }
                 }
             }
-
+            const wishList_text = {
+                genre_name: 'Genre: ',
+            }
             genre = genre.join(', ');
             return (
                 <div key={index} className="movie_wish_list">
@@ -75,13 +77,15 @@ const WishList = () => {
                             <div className="bg"></div>
                         </Link>
                         <Link to={"/movie/" + movie.id}>  <img className="play_button" src={Play_button} alt='play' />
-                            {genre}
+
                         </Link>
                     </div>
 
                     <div className="card_content">
                         <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+                        <div className="genre_movie">{wishList_text.genre_name}<span className="pink">{genre}</span></div>
                         <div className="rating_wish_list">{movie.vote_average.toFixed(1)}</div>
+
                         <div className="overview_wish_list" id="section-1">{movie.overview}</div>
                     </div>
                 </div>)
@@ -92,7 +96,7 @@ const WishList = () => {
         }
         return (
             <div className="bg_wish_list">
-                <div className="container">
+                <div className="container container_wish_list">
                     <h2 className='title_wish_list'> {wishList.title}</h2>
                     <div className="movies_wish_list">{items}</div>
                 </div>

@@ -21,7 +21,7 @@ const ContactsList = () => {
     return (
         <div className="wrapper_contacts">
             < div className="contacts_top">
-                <div className='contacts_top_content container'>
+                <div className='contacts_top_content container container_contacts'>
                     <h1>{contactsPageTitle.title_page}</h1>
                     <div className='navigation_contacts'>
                         <Link to={"/"}>
@@ -32,7 +32,7 @@ const ContactsList = () => {
                 </div>
             </div>
             <div className='contacts_bottom_bg'>
-                <div className='container'>
+                <div className='container container_contacts'>
                     <div className='contacts_bottom'>
                         <div className='contacts__bottom_left'>
                             <h2>{contactsPageContent.title_content}</h2>

@@ -209,7 +209,6 @@ label {
     text-decoration: none;
 
     h2 {
-
         color: rgba(255, 255, 255, 0.75);
         font-family: 'Ubuntu', sans-serif;
         font-size: 16px;
@@ -224,7 +223,12 @@ label {
 }
 
 @media (max-width: 1400px) {
-    .header {}
+    .header {
+        .header_container {
+            max-width: 1116px;
+
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -296,7 +300,6 @@ label {
 }
 
 @media (max-width: 900px) {
-
     .header {
         .header_container {
             max-width: 720px;

@@ -9,7 +9,7 @@ function MainMenuBurg(props) {
     );
 
     return (
-        <div className="wrapper">
+        <div className="wrapper_burger_menu">
             <ul>{listItems}</ul>
         </div>
     );

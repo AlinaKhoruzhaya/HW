@@ -42,15 +42,28 @@ function SliderAbout() {
 
     return (
         <div className='about_section_third_bg'>
-            <div className='container'>
+            <div className='container container_about'>
                 <h2>{titlePage.title}</h2>
                 <div className='bg_swiper_about'>
                     <Swiper
                         rewind={true}
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={40}
-                        slidesPerView={3}
                         navigation
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                            },
+
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                            },
+                        }}
                         scrollbar={{ draggable: true }}
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log('slide change')}

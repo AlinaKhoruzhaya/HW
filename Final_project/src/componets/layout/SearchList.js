@@ -92,21 +92,21 @@ function SearchList() {
             }
             genre = genre.join(', ');
             return (
-            <div key={index} className="movie_search_list">
-                <div className="wrapper_img_search_list">
-                    <Link to={"/movie/" + movie.id}> <img className="poster_search_list"
-                                                          src={imgBaseURL + movie.poster_path}/></Link>
-                    <Link to={"/movie/" + movie.id}>
-                        <div className="bg_search_list"></div>
-                    </Link>
-                    <Link to={"/movie/" + movie.id}> <img className="play_button" src={Play_button} alt='play'/></Link>
+                <div key={index} className="movie_search_list">
+                    <div className="wrapper_img_search_list">
+                        <Link to={"/movie/" + movie.id}> <img className="poster_search_list"
+                            src={imgBaseURL + movie.poster_path} /></Link>
+                        <Link to={"/movie/" + movie.id}>
+                            <div className="bg_search_list"></div>
+                        </Link>
+                        <Link to={"/movie/" + movie.id}> <img className="play_button" src={Play_button} alt='play' /></Link>
+                    </div>
+                    <div className="card_content_search_list">
+                        <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
+                        <p className="genre">{genre}</p>
+                        <p className="rating">{movie.vote_average.toFixed(1)}</p>
+                    </div>
                 </div>
-                {genre}
-                <div className="card_content_search_list">
-                    <Link to={"/movie/" + movie.id}><h2>{movie.title}</h2></Link>
-                    <p className="rating">{movie.vote_average.toFixed(1)}</p>
-                </div>
-            </div>
             )
         });
 

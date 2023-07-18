@@ -61,7 +61,7 @@ const AboutUs = () => {
     return (
         <div className="wrapper_about">
             < div className="about_top">
-                <div className='about_top_content container'>
+                <div className='about_top_content container container_about'>
                     <h1>{AboutUsNav.title_page}</h1>
                     <div className='navigation_about'>
                         <Link to={"/"}>
@@ -72,53 +72,53 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className='about_section_first_bg'>
-                <div className='container'>
+                <div className='container container_about'>
                     <div className='about_section_first'>
                         <h2><span>{AboutUsText.title_name}</span>{AboutUsText.title}</h2>
                         <div className='about_section_first_text'>{AboutUsText.section_first}</div>
                         <div className='about_section_first_text'>{AboutUsText.section_second}</div>
-                        <div>
+                        <div className='block_grid'>
                             <div className='line'>
-                                <div className='blok'>
-                                    <div className='img'><img src={Screen} alt="screen" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Screen} alt="screen" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_first}</div>
                                         <div className='text'>{Advantages.content_section_first}</div>
                                     </div>
                                 </div>
-                                <div className='blok'>
-                                    <div className='img'><img src={Tape} alt="tape" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Tape} alt="tape" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_third}</div>
                                         <div className='text'>{Advantages.content_section_third}</div>
                                     </div>
                                 </div>
-                                <div className='blok'>
-                                    <div className='img'><img src={Tv} alt="tv" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Tv} alt="tv" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_fifth}</div>
                                         <div className='text'>{Advantages.content_section_fifth}</div>
                                     </div>
                                 </div>
                             </div>
                             <div className='line'>
-                                <div className='blok'>
-                                    <div className='img'><img src={Ticket} alt="Ticket" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Ticket} alt="Ticket" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_second}</div>
                                         <div className='text'>{Advantages.content_section_second}</div>
                                     </div>
                                 </div>
-                                <div className='blok'>
-                                    <div className='img'><img src={Airplay} alt="Airplay" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Airplay} alt="Airplay" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_fourth}</div>
                                         <div className='text'>{Advantages.content_section_fourth}</div>
                                     </div>
                                 </div>
-                                <div className='blok'>
-                                    <div className='img'><img src={Language} alt="Language" /></div>
-                                    <div className='content'>
+                                <div className='blok_line'>
+                                    <div className='img_about'><img src={Language} alt="Language" /></div>
+                                    <div className='content_about_first'>
                                         <div className='title'>{Advantages.name_section_sixth}</div>
                                         <div className='text'>{Advantages.content_section_sixth}</div>
                                     </div>
@@ -130,7 +130,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className='about_section_second_bg'>
-                <div className='container'>
+                <div className='container container_about'>
                     <h2>{SectionSecond.name_section}</h2>
                     <div className='about_section_second_content'>
                         <div className='column'>
@@ -153,7 +153,7 @@ const AboutUs = () => {
             </div>
             <SliderAbout />
             <div className='about_section_fourth_bg'>
-                <div className='container'>
+                <div className='container container_about'>
                     <h2>{SectionFourth.name_section}</h2>
                     <div className='text'>{SectionFourth.text}<Link to={"/"}>{SectionFourth.link}</Link></div>
                     <div className='bg_nav_partners'>

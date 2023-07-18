@@ -54,17 +54,17 @@ function footer() {
         <footer>
             <div className="footer">
                 <div className="footer_container container">
-                    <div>
+                    <div className="footer_logo_icon">
                         <Link to={""}>
                             <img src={Logo} alt="logo" />
                         </Link>
                         <NavFooterSocialMedia />
                     </div>
-                    <div className="column"><span>{columnName.column_first}</span>
+                    <div className="column colums_first"><span>{columnName.column_first}</span>
                         <MainMenu links={linksFirst} /></div>
-                    <div className="column"><span>{columnName.column_second}</span>
+                    <div className="column colums_second"><span>{columnName.column_second}</span>
                         <MainMenu links={linksSecond} /></div>
-                    <MainMenu links={linksThird} />
+                    <MainMenu className="colums_third" links={linksThird} />
 
                 </div><div className="bottom_content container">
                     {contentBottomPage.text}
